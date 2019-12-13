@@ -15,7 +15,7 @@
   sub: SN
 - name: Knowledge Representation
   sub: KR
-- name: Biomedical and Health Informatics
-  sub: BHI
+- name: Biomedical and Health informatics
+  sub: CI
 - name: Travel
   sub: TV
