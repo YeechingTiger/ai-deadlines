@@ -44,7 +44,7 @@
   full_title: The 33th International Conference on Industrial, Engineering & Other Applications of Applied Intelligent Systems
   year: 2020
   id: ieaaie20
-  link: Kitakyushu, Japan
+  link: https://jsasaki3.wixsite.com/ieaaie2020
   deadline: 'January 13, 2020 23:59:59'
   timezone: UTC-12
   date: July 21-24, 2020
@@ -61,7 +61,7 @@
   full_title: The 8th IEEE International Conference on Healthcare 
   year: 2020
   id: ichi20
-  link: Oldenburg, Germany
+  link: https://hs-heilbronn.de/ichi2020/
   deadline: 'February 20, 2020 23:59:59'
   timezone: UTC-12
   date: June 15-18, 2020
@@ -78,7 +78,7 @@
   full_title: International Conference on Bioinformatics and Biomedicine
   year: 2020
   id: bibm20
-  link: Seoul, South Korea
+  link: https://ieeebibm.org/BIBM2020/
   deadline: 'September 1, 2020 23:59:59'
   timezone: UTC-12
   date: December 16-19, 2020
@@ -95,7 +95,7 @@
   full_title: The International AAAI Conference on Web and Social Media (ICWSM)
   year: 2020
   id: icwsm20
-  link: Atlanta, Georgia
+  link: https://www.icwsm.org/2020/index.html
   deadline: 'January 15, 2020 23:59:59'
   timezone: UTC-12
   date: June, 2020
@@ -112,7 +112,7 @@
   full_title: International Conference on Artificial Intelligence in Medicine
   year: 2020
   id: aime20
-  link: Minneapolis, MN
+  link: http://aime20.aimedicine.info/index.php
   deadline: 'April 30, 2020 23:59:59'
   timezone: UTC-12
   date: August 26-29, 2020
@@ -129,7 +129,7 @@
   full_title: International Joint Conference on Artificial Intelligence and the Pacific Rim International Conference on Artificial Intelligence
   year: 2020
   id: ijcaipricai20
-  link: Yokohama, Japan
+  link: https://ijcai20.org/
   deadline: 'January 21, 2020 23:59:59'
   timezone: UTC-12
   date: July 11-17, 2020
@@ -146,7 +146,7 @@
   full_title: International Conference on Machine Learning
   year: 2020
   id: icml20
-  link: Vienna, Austria
+  link: https://icml.cc/Conferences/2020
   deadline: 'February 7, 2020 03:59:59'
   timezone: PST
   date: July 12-18, 2020
@@ -163,7 +163,7 @@
   full_title: Knowledge Discovery and Data Mining
   year: 2020
   id: kdd20
-  link: San Diego, California
+  link: https://www.kdd.org/kdd2020/
   deadline: 'February 13, 2020 23:59:59'
   timezone: GMT-11
   date: August 22-27, 2020
@@ -180,7 +180,7 @@
   full_title: AAAI Conference on Artificial Intelligence
   year: 2020
   id: aaai20
-  link: New York, New York
+  link: https://aaai.org/Conferences/AAAI-20/
   deadline: 'September 5, 2019 23:59:59'
   timezone: UTC-10
   date: February 7-12, 2020
@@ -197,7 +197,7 @@
   full_title: APWeb-WAIM Joint Conference on Web and Big Data
   year: 2020
   id: apwebwaim20
-  link: Tianjin, China
+  link: http://www.tjudb.cn/apwebwaim2020/?from=timeline&isappinstalled=0
   deadline: 'February 16, 2020 23:59:59'
   timezone: PST
   date: August 13-14, 2020
@@ -214,7 +214,7 @@
   full_title: The 2nd International Conference on Tourism, Business, & Social Sciences 2020
   year: 2020
   id: tbss20
-  link: Thailand
+  link: https://www.dpu.ac.th/caiconf2020/
   deadline: 'December 31, 2019 23:59:59'
   timezone: UTC-12
   date: December 11, 2020
@@ -232,7 +232,7 @@
  on Science and Technology, Social Sciences, and Humanities 2020
   year: 2020
   id: rsussh20
-  link: Rangsit Univetsity, Thailand
+  link: https://rsucon.rsu.ac.th/
   deadline: 'January 31, 2020 23:59:59'
   timezone: UTC-12
   date: May 1, 2020
@@ -250,7 +250,7 @@
  3nd ECTI Northern Section Conference on Electrical, Electronics, Computer and Telecommunications Engineering (NCON)
   year: 2020
   id: icdamt20
-  link: Pattaya, Thailand
+  link: https://icdamt.ict.up.ac.th/call.php
   deadline: 'November 29, 2019 23:59:59'
   timezone: UTC-12
   date: March 11-14, 2020
@@ -267,7 +267,7 @@
   full_title: 3rd International Conference on Research in Life-Sciences & Healthcare (ICRLSH)
   year: 2020
   id: icrlsh20
-  link: Suntec City Mall, Singapore
+  link: https://eurasiaresearch.org/conference/singapore-icrlsh-28-29-mar-2020
   deadline: 'March 26, 2020 23:59:59'
   timezone: UTC-12
   date: March 28-29, 2020
