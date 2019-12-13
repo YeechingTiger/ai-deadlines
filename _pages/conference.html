@@ -30,11 +30,13 @@ permalink:  /conference/
                 <div class="col-xs-12 col-sm-12">
                   <h1>
                     <a id="conf-title-href" nohref></a>
-                    <span id="twitter-box"></span>
                   </h1>
                 </div>
+                <div class="col-xs-12 col-sm-12">
+                    <h3 id="conf-fullname"></h3>
+                  </div>
                 <div class="meta deadline col-xs-12">
-                  <span id="conf-date"></span>. <span id="conf-place"></span>.<br>
+                  <span id="conf-date"></span>&nbsp;&nbsp;<span id="conf-place"></span><br>
                 </div>
                 <div class="meta deadline col-xs-12 col-md-5">
                   Deadline in timezone from conference website:
@@ -69,8 +71,7 @@ permalink:  /conference/
           <hr>
         </div>
         <footer>
-          <a href="/">{{ site.domain }}</a> is maintained by <a href="//twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>.<br>
-          If you find it useful, consider buying him <a target="_blank" href="https://read.gift/u/abhshkdz">a book</a> or <a title="_blank" href="https://www.buymeacoffee.com/abhshkdz">coffee</a>.
+          <a href="/">{{ site.domain }}</a> is maintained by <a>@{{ site.twitter_username }}</a>.<br>
         </footer>
     </div>
     <script type="text/javascript" charset="utf-8">
@@ -108,6 +109,7 @@ permalink:  /conference/
               $('#conf-date').text("{{conf.date}}");
               $('#conf-place').text("{{conf.place}}");
               $('#conf-website').text("{{conf.link}}");
+              $('#conf-fullname').text("{{conf.full_title}}");
               $('#conf-website').attr('href', "{{conf.link}}");
               var twitter_slug = '<a href="https://twitter.com/share" class="twitter-share-button" data-text="Countdown to the #{{ conf.title }}{{ conf.year }} deadline!" data-show-count="false" style="font-size:13px;">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8">';
               $('#twitter-box').html(twitter_slug);

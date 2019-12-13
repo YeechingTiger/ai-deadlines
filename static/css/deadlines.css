@@ -106,6 +106,10 @@ footer {
   margin-bottom: 5px;
 }
 
+.conf-row div {
+  margin-bottom: 5px;
+}
+
 .conf-title {
   font-size: 20px;
   font-weight: 400;
@@ -204,4 +208,27 @@ footer {
 
 .calendar img {
   height: 20px;
+}
+
+.marked {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+}
+
+.non-marked {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.conf-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conf-content {
+  width: 95%;
 }
