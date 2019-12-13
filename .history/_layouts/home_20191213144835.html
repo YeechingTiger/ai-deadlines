@@ -398,8 +398,8 @@
     function hideUncheckedSubs() {
       if (marked == 'false') {
         $('.conf-marked-false').show();
+        $('.conf-marked').show();
       }
-      $('.conf-marked').show();
       for (var i = 0; i < all_subs.length; i++) {
         if (subs.indexOf(all_subs[i]) < 0) {
           $('.' + all_subs[i] + '-conf').hide();

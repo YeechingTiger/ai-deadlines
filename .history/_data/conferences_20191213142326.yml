@@ -66,8 +66,6 @@
   marked: true
   extra-deadline: '<ul><b>Other Deadlines:</b><li>FY 2020: 2020-01-31 17:00:00</li><li>FY 2021:
     2021-01-25 17:00:00</li></ul>'
-  project_title: Grant
-  people: YI
 
 - title: RSUSSH
   full_title: The 5th RSU National and International Research Conference on Science
@@ -140,26 +138,10 @@
     \ supplements for NIH grants that are not focused on Alzheimer\u2019s disease"
   id: NOT-AG-20-008
   link: https://grants.nih.gov/grants/guide/notice-files/NOT-AG-20-008.html
-  deadline: '2020-03-06 17:00:00'
+  deadline: '2020-03-06 23:59:59'
   timezone: EST
   marked: true
   type: GT
-  project_title: Grant
-  people: JIANG
-
-- title: HIMSS
-  year: 2020
-  full_title: HIMSS Global Health Conference & Exhibition
-  id: HIMSS-2020
-  link: https://www.himssconference.org/
-  deadline: '2020-03-09 00:00:00'
-  timezone: EST
-  date: March 9-13, 2020
-  place: Orlando, Florida
-  marked: true
-  type: CFWS
-  project_title: Attending Only
-  people: JIANG
 
 - title: ICRLSH
   full_title: 3rd International Conference on Research in Life-Sciences & Healthcare
@@ -187,8 +169,8 @@
   sub: SW
   type: CFWS
   marked: true
-  people: HANSI,XING
-  project_title: Knwoledge Graph QA system
+  people: HANSI,XING;YUNPENG
+  project_title: Knwoledge Graph QA system;Test
 
 - title: AIME
   full_title: International Conference on Artificial Intelligence in Medicine

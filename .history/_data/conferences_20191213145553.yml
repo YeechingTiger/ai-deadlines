@@ -147,17 +147,15 @@
   project_title: Grant
   people: JIANG
 
-- title: HIMSS
-  year: 2020
-  full_title: HIMSS Global Health Conference & Exhibition
-  id: HIMSS-2020
-  link: https://www.himssconference.org/
-  deadline: '2020-03-09 00:00:00'
+- title: NOT-AG-20-008
+  full_title: "Notice of Special Interest: Alzheimer\u2019s-focused administrative\
+    \ supplements for NIH grants that are not focused on Alzheimer\u2019s disease"
+  id: NOT-AG-20-008
+  link: https://grants.nih.gov/grants/guide/notice-files/NOT-AG-20-008.html
+  deadline: '2020-03-06 17:00:00'
   timezone: EST
-  date: March 9-13, 2020
-  place: Orlando, Florida
   marked: true
-  type: CFWS
+  type: GT
   project_title: Attending Only
   people: JIANG
 
