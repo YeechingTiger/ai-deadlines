@@ -29,14 +29,14 @@
   id: iswc20
   link: https://iswc2020.semanticweb.org/
   deadline: '2020-03-27 23:59:59'
-  timezone: UTC+2
+  timezone: GMT+2
   date: November 2-6, 2020
   place: Athens, Greece
   sub: SW
   type: CFWS
   marked: true
   people: HANSI,XING;YUNPENG
-  project_title: Knwoledge Graph QA system;Test project
+  project_title: Knwoledge Graph QA system;Test
   #note: "<ul><b>Note:</b><li>Deadline1: '2020-01-31 23:59:59'</li><li>Deadline2: '2020-01-31 23:59:59'</li></ul>"
 
 - title: IEA/AIE
@@ -44,7 +44,7 @@
   year: 2020
   id: ieaaie20
   link: https://jsasaki3.wixsite.com/ieaaie2020
-  deadline: 'January 13, 2020 23:59:59'
+  deadline: '2020-01-15 23:59:59'
   timezone: UTC-12
   date: July 21-24, 2020
   place: Kitakyushu, Japan
@@ -55,13 +55,12 @@
   #project_title: 
   #note: 
 
-
 - title: ICHI
   full_title: The 8th IEEE International Conference on Healthcare 
   year: 2020
   id: ichi20
   link: https://hs-heilbronn.de/ichi2020/
-  deadline: 'February 20, 2020 23:59:59'
+  deadline: '2020-02-20 23:59:59'
   timezone: UTC-12
   date: June 15-18, 2020
   place: Oldenburg, Germany
@@ -72,13 +71,12 @@
   #project_title: 
   #note: 
 
-
 - title: BIBM
   full_title: International Conference on Bioinformatics and Biomedicine
   year: 2020
   id: bibm20
   link: https://ieeebibm.org/BIBM2020/
-  deadline: 'September 1, 2020 23:59:59'
+  deadline: '2020-09-01 23:59:59'
   timezone: UTC-12
   date: December 16-19, 2020
   place: Seoul, South Korea
@@ -89,13 +87,12 @@
   #project_title: 
   #note: 
 
-
 - title: ICWSM
   full_title: The International AAAI Conference on Web and Social Media (ICWSM)
   year: 2020
   id: icwsm20
   link: https://www.icwsm.org/2020/index.html
-  deadline: 'January 15, 2020 23:59:59'
+  deadline: '2020-01-15 23:59:59'
   timezone: UTC-12
   date: June, 2020
   place: Atlanta, Georgia
@@ -106,13 +103,12 @@
   #project_title: 
   #note: 
 
-
 - title: AIME
   full_title: International Conference on Artificial Intelligence in Medicine
   year: 2020
   id: aime20
   link: http://aime20.aimedicine.info/index.php
-  deadline: 'April 30, 2020 23:59:59'
+  deadline: '2020-04-30 23:59:59'
   timezone: UTC-12
   date: August 26-29, 2020
   place: Minneapolis, MN
@@ -121,15 +117,14 @@
   marked: false
   #people: 
   #project_title: 
-  #note: "<ul><b>Note:</b><li>Deadline1: 'April 16, 2020 23:59:59'</li>"
-
+  #note: "<ul><b>Note:</b><li>Abstract Deadline: 'April 16, 2020 23:59:59'</li>"
 
 - title: IJCAI-PRICAI
   full_title: International Joint Conference on Artificial Intelligence and the Pacific Rim International Conference on Artificial Intelligence
   year: 2020
   id: ijcaipricai20
   link: https://ijcai20.org/
-  deadline: 'January 21, 2020 23:59:59'
+  deadline: '2020-01-21 23:59:59'
   timezone: UTC-12
   date: July 11-17, 2020
   place: Yokohama, Japan
@@ -138,15 +133,14 @@
   marked: false
   #people: 
   #project_title: 
-  #note: "<ul><b>Note:</b><li>Deadline1: 'January 15, 2020 23:59:59'</li>"
-
+  #note: "<ul><b>Note:</b><li>Abstract Deadline: 'January 15, 2020 23:59:59'</li>"
 
 - title: ICML
   full_title: International Conference on Machine Learning
   year: 2020
   id: icml20
   link: https://icml.cc/Conferences/2020
-  deadline: 'February 7, 2020 03:59:59'
+  deadline: '2020-02-07 3:59:59'
   timezone: America/Los_Angeles
   date: July 12-18, 2020
   place: Vienna, Austria
@@ -155,15 +149,14 @@
   marked: false
   #people: 
   #project_title: 
-  #note: "<ul><b>Note:</b><li>Deadline1: 'January 31, 2020 03:59:59'</li>"
-
+  #note: "<ul><b>Note:</b><li>Abstract Deadline: 'January 31, 2020 3:59:59'</li>"
 
 - title: KDD 
   full_title: Knowledge Discovery and Data Mining
   year: 2020
   id: kdd20
   link: https://www.kdd.org/kdd2020/
-  deadline: 'February 13, 2020 23:59:59'
+  deadline: '2020-02-13 23:59:59'
   timezone: UTC-11
   date: August 22-27, 2020
   place: San Diego, California
@@ -174,13 +167,12 @@
   #project_title: 
   #note: 
 
-
 - title: AAAI
   full_title: AAAI Conference on Artificial Intelligence
   year: 2020
   id: aaai20
   link: https://aaai.org/Conferences/AAAI-20/
-  deadline: 'September 5, 2019 23:59:59'
+  deadline: '2019-09-05 23:59:59'
   timezone: UTC-10
   date: February 7-12, 2020
   place: New York, New York
@@ -189,15 +181,14 @@
   marked: false
   #people: 
   #project_title: 
-  #note: "<ul><b>Note:</b><li>Deadline1: 'August 30, 2019 23:59:59'</li>"
-
+  #note: "<ul><b>Note:</b><li>Abstract Deadline: 'August 30, 2019 23:59:59'</li>"
 
 - title: APWeb-WAIM
   full_title: APWeb-WAIM Joint Conference on Web and Big Data
   year: 2020
   id: apwebwaim20
   link: http://www.tjudb.cn/apwebwaim2020/?from=timeline&isappinstalled=0
-  deadline: 'February 16, 2020 23:59:59'
+  deadline: '2020-02-16 23:59:59'
   timezone: America/Los_Angeles
   date: August 13-14, 2020
   place: Tianjin, China
@@ -206,15 +197,14 @@
   marked: false
   #people: 
   #project_title: 
-  #note: "<ul><b>Note:</b><li>Deadline1: 'February 9, 2020 23:59:59'</li>"
-
+  #note: "<ul><b>Note:</b><li>Abstract Deadline: 'February 9, 2020 23:59:59'</li>"
 
 - title: TBSS
   full_title: The 2nd International Conference on Tourism, Business, & Social Sciences 2020
   year: 2020
   id: tbss20
   link: https://www.dpu.ac.th/caiconf2020/
-  deadline: 'December 31, 2019 23:59:59'
+  deadline: '2019-12-31 23:59:59'
   timezone: UTC-12
   date: December 11, 2020
   place: Thailand
@@ -225,14 +215,12 @@
   #project_title: 
   #note: 
 
-
 - title: RSUSSH
-  full_title: The 5th RSU National and International Research Conference 
-   on Science and Technology, Social Sciences, and Humanities 2020
+  full_title: The 5th RSU National and International Research Conference on Science and Technology, Social Sciences, and Humanities 2020
   year: 2020
   id: rsussh20
   link: https://rsucon.rsu.ac.th/
-  deadline: 'January 31, 2020 23:59:59'
+  deadline: '2020-01-31 23:59:59'
   timezone: UTC-12
   date: May 1, 2020
   place: Rangsit Univetsity, Thailand
@@ -243,14 +231,12 @@
   #project_title: 
   #note: 
 
-
 - title: ICDAMT
-  full_title: The 5th International Conference on Digital Arts, Media and Technology (DAMT) and
-   3nd ECTI Northern Section Conference on Electrical, Electronics, Computer and Telecommunications Engineering (NCON)
+  full_title: The 5th International Conference on Digital Arts, Media and Technology (DAMT) and 3nd ECTI Northern Section Conference on Electrical, Electronics, Computer and Telecommunications Engineering (NCON)
   year: 2020
   id: icdamt20
   link: https://icdamt.ict.up.ac.th/call.php
-  deadline: 'November 29, 2019 23:59:59'
+  deadline: '2019-11-29 23:59:59'
   timezone: UTC-12
   date: March 11-14, 2020
   place: Pattaya, Thailand
@@ -261,13 +247,12 @@
   #project_title: 
   #note: 
 
-
 - title: ICRLSH
   full_title: 3rd International Conference on Research in Life-Sciences & Healthcare (ICRLSH)
   year: 2020
   id: icrlsh20
   link: https://eurasiaresearch.org/conference/singapore-icrlsh-28-29-mar-2020
-  deadline: 'March 26, 2020 23:59:59'
+  deadline: '2020-03-26 23:59:59'
   timezone: UTC-12
   date: March 28-29, 2020
   place: Suntec City Mall, Singapore
