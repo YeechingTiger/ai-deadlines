@@ -234,12 +234,7 @@ footer {
 }
 
 .type-icon {
-  width: 25px;
-  height: 25px;
-  margin-left: 3px;
-}
-
-.type-flex {
-  display: flex;
-  justify-content: flex-start;
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
 }

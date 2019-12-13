@@ -44,7 +44,7 @@
             <div class="form-group">
               <div class="col-md-4 col-xs-6">
                 <div class="checkbox">
-                  <label class="type-flex">
+                  <label>
                     <input type="checkbox" id="marked-checkbox" class=""> Targeted
                     <div class="type-icon"><img src="/static/img/star.png" alt=""></div>
                   </label>
@@ -58,9 +58,9 @@
               {% for type in site.data.deadline_types %}
               <div class="col-md-4 col-xs-6">
                 <div class="checkbox">
-                  <label class="type-flex">
+                  <label>
                     <input type="checkbox" id="{{ type.sub }}-checkbox" class=""> {{ type.name }}
-                    <div class="type-icon"><img src="/static/img/{{ type.sub }}.png" alt=""></div>
+                    <div class="type"><img src="/static/img/{{ type.sub }}.png" alt=""></div>
                   </label>
                 </div>
               </div>
@@ -130,7 +130,7 @@
         <div class="non-marked"></div>
         {% endif %}
         {% if conf.type %}
-        <div class="marked"><img src="/static/img/{{ conf.type }}.png" alt=""></div>
+        <div class="marked"><img src="/static/img/{{conference}}.png" alt=""></div>
         {% endif %}
         <div class="conf-content">
           <h5 class="conf-type-{{conf.type}}"></h5>

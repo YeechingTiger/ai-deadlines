@@ -7,7 +7,7 @@
   sub: DM
 - name: Semantic Web
   sub: SW
-# - name: Travel
-#   sub: TV
+- name: Travel
+  sub: TV
 - name: Social Network
   sub: SN

@@ -216,6 +216,10 @@ footer {
   margin-right: 20px;
 }
 
+.type-icon {
+  
+}
+
 .non-marked {
   width: 35px;
   height: 35px;
@@ -231,15 +235,4 @@ footer {
 
 .conf-content {
   width: 95%;
-}
-
-.type-icon {
-  width: 25px;
-  height: 25px;
-  margin-left: 3px;
-}
-
-.type-flex {
-  display: flex;
-  justify-content: flex-start;
 }
