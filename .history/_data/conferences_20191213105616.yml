@@ -147,7 +147,7 @@
   id: icml20
   link: https://icml.cc/Conferences/2020
   deadline: 'February 7, 2020 03:59:59'
-  timezone: America/Los_Angeles
+  timezone: PST
   date: July 12-18, 2020
   place: Vienna, Austria
   sub: AI
@@ -198,7 +198,7 @@
   id: apwebwaim20
   link: http://www.tjudb.cn/apwebwaim2020/?from=timeline&isappinstalled=0
   deadline: 'February 16, 2020 23:59:59'
-  timezone: America/Los_Angeles
+  timezone: PST
   date: August 13-14, 2020
   place: Tianjin, China
   sub: DM,ML,SW,SN,TV
