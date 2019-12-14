@@ -1,19 +1,5 @@
 ---
 
-- title: ICDAMT
-  full_title: The 5th International Conference on Digital Arts, Media and Technology
-    (DAMT) and 3nd ECTI Northern Section Conference on Electrical, Electronics, Computer
-    and Telecommunications Engineering (NCON)
-  year: 2020
-  id: icdamt20
-  link: https://icdamt.ict.up.ac.th/call.php
-  deadline: '2019-12-16 23:59:59'
-  timezone: UTC-12
-  date: March 11-14, 2020
-  place: Pattaya, Thailand
-  sub: AI,TV
-  type: CFWS
-  marked: false
 
   - title: TBSS
   full_title: The 2nd International Conference on Tourism, Business, & Social Sciences
