@@ -32,13 +32,15 @@
 - title: NOT-CA-20-016
   full_title: 'Notice of Webinar for the NCI Pathway to Independence Award for Outstanding Early Stage Postdoctoral Researchers (K99/R00): RFA-CA-20-014 (K99/R00 - Independent Clinical Trial Not Allowed) and RFA-CA-20-015 (K99/R00 - Independent Clinical Trial Required)'
   id: NOT-CA-20-016
-  link: https://grants.nih.gov/grants/guide/notice-files/NOT-CA-20-016.html
-  deadline: '2020-01-08 13:00:00'
+  link: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-20-049.html
+  deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
   marked: true
+  extra-deadline: '<ul><b>Other Deadlines:</b><li>
+    2021-01-25 17:00:00</li></ul>'
   project_title: Grant
-  people: ZHAOYI
+  people: YI
 
 - title: IEA/AIE
   full_title: The 33th International Conference on Industrial, Engineering & Other

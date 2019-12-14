@@ -37,8 +37,10 @@
   timezone: EST
   type: GT
   marked: true
+  extra-deadline: '<ul><b>Other Deadlines:</b><li>
+    2021-01-25 17:00:00</li></ul>'
   project_title: Grant
-  people: ZHAOYI
+  people: YI
 
 - title: IEA/AIE
   full_title: The 33th International Conference on Industrial, Engineering & Other
