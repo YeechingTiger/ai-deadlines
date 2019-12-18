@@ -1,0 +1,622 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap.min.css" | prepend:site.baseurl }}">
+  <link rel="stylesheet" type="text/css"
+    href="{{ "/static/css/deadlines.css" | prepend:site.baseurl }}?t={{site.time | date: '%s'}}"
+    media="screen,projection">
+  <link rel="shortcut icon" href="{{ "/static/img/favicon.png" | prepend:site.baseurl }}">
+  <script type="text/javascript" src="{{ "/static/js/jquery.min.js" | prepend:site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ "/static/js/jquery.countdown.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/moment.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/moment-timezone-with-data.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/store.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/ouical.min.js" | prepend:site.baseurl }}"></script>
+
+</head>
+
+<body>
+  <div class="top-strip"></div>
+  <div class="container">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <h1>
+            {{ site.title }}
+          </h1>
+        </div>
+        <div class="meta col-xs-12">
+          {{ site.description }}.
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- <div class="well"> -->
+          <form class="form-horizontal form-marked">
+            <div class="form-group">
+              <div class="col-md-4 col-xs-6">
+                <div class="checkbox">
+                  <label class="type-flex">
+                    <input type="checkbox" id="marked-checkbox" class=""><span class="checkbox-text">Targeted</span>
+                    <div class="type-icon"><img src="/static/img/star.png" alt=""></div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-xs-6">
+                <div class="checkbox">
+                  <label class="type-flex">
+                    <input type="checkbox" id="marked-checkbox" class=""><span class="checkbox-text">Attending</span>
+                    <div class="type-icon"><img src="/static/img/star.png" alt=""></div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-xs-6">
+                <div class="checkbox">
+                  <label class="type-flex">
+                    <input type="checkbox" id="marked-checkbox" class=""><span class="checkbox-text">Submitted</span>
+                    <div class="type-icon"><img src="/static/img/star.png" alt=""></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form class="form-horizontal form-type">
+            <h3>Type</h3>
+            <div class="form-group">
+              {% for type in site.data.deadline_types %}
+              <div class="col-md-4 col-xs-6">
+                <div class="checkbox">
+                  <label class="type-flex">
+                    <input type="checkbox" id="{{ type.sub }}-checkbox" class=""><span
+                      class="checkbox-text">{{ type.name }}</span>
+                    <div class="type-icon"><img src="/static/img/{{ type.sub }}.png" alt=""></div>
+                  </label>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </form>
+          <form class="form-horizontal topic">
+            <h3>Topic</h3>
+            <div class="form-group">
+              {% for type in site.data.types %}
+              <div class="col-md-4 col-xs-6">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id="{{ type.sub }}-checkbox" class=""><span
+                      class="checkbox-text">{{ type.name }}</span>
+                  </label>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </form>
+          <form class="form-horizontal form-people">
+            <h3>People</h3>
+            <div class="form-group">
+              {% for type in site.data.people %}
+              <div class="col-md-4 col-xs-6">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id="{{ type.sub }}-checkbox" class=""><span
+                      class="checkbox-text">{{ type.name }}</span>
+                  </label>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    {% for conf in site.data.conferences %}
+    {% assign subs = conf.sub | split: "," %}
+    {% if conf.people %}
+      {% assign peopleArray = conf.people | split: ";" %}
+      {% assign projectArray = conf.project_title | split: ";" %}
+      {% assign peopleShow = "" | split: "," %}
+      {% for people in peopleArray %}
+      {% assign peopleList = people | split: "," %}
+      {% assign peopleShow = peopleShow | concat: peopleList %}
+      {% endfor %}
+    {% else %}
+      
+    {% endif %}
+    <div id="{{conf.id}}"
+      class="{% for sub in subs %} {{sub}}-conf {% endfor %} 
+             {{conf.type}}-type 
+             {% for person in peopleShow %} {{person}}-people {% endfor %} 
+             {% if conf.marked == true %} conf-marked {% else %} conf-marked-false {% endif %}">
+      <div class="conf-flex">
+        {% if conf.marked %}
+        <div class="marked"><img src="/static/img/star.png" alt=""></div>
+        {% else %}
+        <div class="non-marked"></div>
+        {% endif %}
+        {% if conf.type %}
+        <div class="marked"><img src="/static/img/{{ conf.type }}.png" alt=""></div>
+        {% endif %}
+        <div class="conf-content">
+          <h5 class="card-type conf-type-{{conf.type}}"></h5>
+          <div class="row conf-row">
+            <div class="col-xs-12 col-sm-6">
+              <a class="conf-title" href="/conference?id={{ conf.id }}">{{conf.title}} {{conf.year}}</a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <span class="timer"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="meta">
+                {% if conf.date %}
+                <span class="conf-date">{{conf.date}}</span>
+                {% endif %}
+                &nbsp;
+                {% if conf.place %}
+                <span class="conf-place">
+                  <a href="http://maps.google.com/?q={{conf.place}}">{{conf.place}}</a>
+                </span>
+                {% endif %}
+              </div>
+              <div class="note">
+                <a href="{{conf.link}}" target="_blank">{{conf.full_title}}</a>
+              </div>
+              {% if conf.note %}
+              <div class="note">
+                {{conf.note}}
+              </div>
+              {% endif %}
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="deadline">
+                <div>Deadline:
+                  <span class="deadline-time"></span>
+                  {% if conf.extra-deadline %}
+                  <div class="note">
+                    {{conf.extra-deadline}}
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="calendar"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="meta">
+              <div class="col-xs-12">
+                <ul>
+                  {% if conf.project_title %}
+                  <b>Projects:</b>
+                  {% endif %}
+                  {% for project in projectArray %}
+                  {% assign index = forloop.index | minus: 1 %}
+                  <li>{{project}} ({{peopleArray[index]}})</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              {% for sub in subs %}
+              <span title="Click to only show {{sub}} conferences" data-sub="{{sub}}"
+                class="conf-sub-{{sub}} conf-sub"></span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    {% endfor %}
+    <footer>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+        </div>
+      </div>
+    </footer>
+    <br><br>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    $(function () {
+      // Make sure this is >= no. of subs
+      // Currently not used
+      var colors = ['#341f97', '#ee5253', '#2e86de',
+        '#ff9f43', '#10ac84', '#222f3e']
+      // Borrowed from https://github.com/moment/moment-timezone/issues/167
+      // Adds support for time zones 'UTC-12'..'UTC+12'
+      function addUtcTimeZones() {
+        // Moment.js uses the IANA timezone database, which supports generic time zones like 'Etc/GMT+1'.
+        // However, the signs for these time zones are inverted compared to ISO 8601.
+        // For more details, see https://github.com/moment/moment-timezone/issues/167
+        for (let offset = -12; offset <= 12; offset++) {
+          const posixSign = offset <= 0 ? '+' : '-';
+          const isoSign = offset >= 0 ? '+' : '-';
+          const link = `Etc/GMT${posixSign}${Math.abs(offset)}|UTC${isoSign}${Math.abs(offset)}`;
+          moment.tz.link(link);
+        }
+      }
+      addUtcTimeZones();
+
+      try {
+        var local_timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        $('.local-timezone').text(local_timezone.toString());
+      }
+      catch (err) {
+        $('.local-timezone-hide').hide();
+      }
+
+
+      // Get all subs
+      var conf_type_data = {{ site.data.types | jsonify
+    }};
+    var type_data = {{ site.data.deadline_types | jsonify }};
+    var people_data = {{ site.data.people | jsonify }};
+    var conf_data = {{ site.data | jsonify }};
+
+    var all_subs = [];
+    var all_types = [];
+    var all_people = [];
+    var sub2name = {};
+    var name2sub = {};
+    var type_sub2name = {};
+    var type_name2sub = {};
+    var people_sub2name = {};
+    var people_name2sub = {};
+
+    for (var i = 0; i < conf_type_data.length; i++) {
+      all_subs[i] = conf_type_data[i]['sub'];
+      sub2name[conf_type_data[i]['sub']] = conf_type_data[i]['name'];
+      name2sub[conf_type_data[i]['name']] = conf_type_data[i]['sub'];
+    }
+
+    for (var i = 0; i < type_data.length; i++) {
+      all_types[i] = type_data[i]['sub'];
+      type_sub2name[type_data[i]['sub']] = type_data[i]['name'];
+      type_name2sub[type_data[i]['name']] = type_data[i]['sub'];
+    }
+
+    for (var i = 0; i < people_data.length; i++) {
+      all_people[i] = people_data[i]['sub'];
+      people_sub2name[people_data[i]['sub']] = people_data[i]['name'];
+      people_name2sub[people_data[i]['name']] = people_data[i]['sub'];
+    }
+
+    {% for conf in site.data.conferences %}
+    {% assign subs = conf.sub | split: "," %}
+    {% for sub in subs %}
+    $('#{{conf.id}} .conf-sub-{{sub}}').html(sub2name["{{sub}}"].toLocaleLowerCase());
+    {% endfor %}
+    {% if conf.deadline == "TBA" %}
+    $('#{{conf.id}} .timer').html("TBA");
+    $('#{{conf.id}} .deadline-time').html("TBA");
+    {% else %}
+    $('#{{conf.id}} .conf-type-{{conf.type}}').html(type_sub2name["{{conf.type}}"]);
+    // adjust date according to deadline timezone
+    var timezone = {% if conf.timezone %}"{{conf.timezone}}" {% else %} "America/New_York" {% endif %};
+    var confDate = moment.tz("{{conf.deadline}}", timezone);
+
+    // render countdown timer
+    $('#{{conf.id}} .timer').countdown(confDate.toDate(), function (event) {
+      $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+    });
+
+    // convert deadline to local timezone
+    try {
+      var localConfDate = moment.tz(confDate, local_timezone);
+      $('#{{conf.id}} .deadline-time').html(localConfDate.toString());
+    }
+    catch (err) {
+      console.log("Error converting to local timezone.");
+    }
+
+    // add calendar button
+    var myCalendar = createCalendar({
+      options: {
+        class: 'calendar-obj',
+
+        // You can pass an ID. If you don't, one will be generated for you
+        id: '{{conf.id}}'
+      },
+      data: {
+        // Event title
+        title: '{{conf.title}} {{conf.year}} deadline',
+
+        // Event start date
+        start: confDate.toDate(), // new Date('June 15, 2013 19:00'),
+
+        // Event duration
+        duration: 60,
+      }
+    });
+    document.querySelector('#{{conf.id}} .calendar').appendChild(myCalendar);
+
+    // check if date has passed, add 'past' class to it
+    var today = moment();
+    if (today.diff(confDate) > 0)
+      $('#{{conf.id}}').addClass('past');
+    {% endif %}
+    {% endfor %}
+
+    // Get subjects from URL
+    var url = new URL(window.location);
+    var subs = url.searchParams.get('sub');
+    var types = url.searchParams.get('type');
+    var people = url.searchParams.get('people');
+    var marked = url.searchParams.get('marked');
+    if (subs == undefined) {
+      subs = store.get('{{ site.domain }}' + 'sub');
+    } else {
+      subs = subs.toUpperCase().split(',');
+    }
+
+    if (types == undefined) {
+      types = store.get('{{ site.domain }}' + 'type');
+    } else {
+      types = types.toUpperCase().split(',');
+    }
+
+    if (people == undefined) {
+      people = store.get('{{ site.domain }}' + 'people');
+    } else {
+      people = people.toUpperCase().split(',');
+    }
+
+    if (marked == undefined || marked == 'undefined') {
+      marked = store.get('{{ site.domain }}' + 'marked');
+    }
+
+    // Get subjects from browser cache
+    if (subs === undefined) {
+      subs = all_subs;
+      for (var i = 0; i < subs.length; i++) {
+        $('#' + subs[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < subs.length; i++) {
+        $('#' + subs[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (types === undefined) {
+      types = all_types;
+      for (var i = 0; i < types.length; i++) {
+        $('#' + types[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < types.length; i++) {
+        $('#' + types[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (people === undefined) {
+      people = all_people;
+      for (var i = 0; i < people.length; i++) {
+        $('#' + people[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < people.length; i++) {
+        $('#' + people[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (marked === undefined || marked === 'undefined') {
+      marked = 'false';
+      $('#marked-checkbox').prop('checked', false);
+    } else {
+      if (marked == 'true') {
+        $('#marked-checkbox').prop('checked', true);
+      } else {
+        $('#marked-checkbox').prop('checked', false);
+      }
+    }
+    // Hide unchecked subs
+    function hideUncheckedSubs() {
+      if (marked == 'false') {
+        $('.conf-marked-false').show();
+      }
+      $('.conf-marked').show();
+      for (var i = 0; i < all_subs.length; i++) {
+        if (subs.indexOf(all_subs[i]) < 0) {
+          $('.' + all_subs[i] + '-conf').hide();
+        }
+      }
+
+      for (var i = 0; i < all_types.length; i++) {
+        if (types.indexOf(all_types[i]) < 0) {
+          $('.' + all_types[i] + '-type').hide();
+        }
+      }
+
+      for (var i = 0; i < all_people.length; i++) {
+        if (people.indexOf(all_people[i]) < 0) {
+          $('.' + all_people[i] + '-people').hide();
+        }
+      }
+
+      var all_deadlines = {};
+
+      for (var i = 0; i < all_types.length; i++) {
+        if (types.indexOf(all_types[i]) >= 0) {
+          $('.' + all_types[i] + '-type').each(function () {
+            var id = $(this).attr('id')
+            all_deadlines[id] = 1;
+            // if (all_types[i] == 'GT') all_deadlines[id] = 3;
+          });
+        }
+      }
+
+      for (var i = 0; i < all_subs.length; i++) {
+        if (subs.indexOf(all_subs[i]) >= 0) {
+          $('.' + all_subs[i] + '-conf').each(function () {
+            var id = $(this).attr('id');
+            if (all_deadlines[id] == 1) {
+              all_deadlines[id] = 2;
+            }
+          });
+
+        }
+      }
+
+      for (var i = 0; i < all_people.length; i++) {
+        if (people.indexOf(all_people[i]) >= 0) {
+          $('.' + all_people[i] + '-people').each(function () {
+            var id = $(this).attr('id');
+
+            if (all_deadlines[id] == 2) {
+              all_deadlines[id] = 3;
+            }
+          });
+        }
+      }
+
+      Object.keys(all_deadlines).forEach(function (key) {
+        var value = all_deadlines[key];
+        if (value == 3) {
+          $('#' + key).show();
+        }
+      });
+
+      if (marked == 'true') {
+        $('.conf-marked-false').hide();
+      }
+
+    }
+
+    hideUncheckedSubs();
+
+    store.set('{{ site.domain }}' + 'sub', subs);
+    store.set('{{ site.domain }}' + 'type', types);
+    store.set('{{ site.domain }}' + 'people', people);
+    store.set('{{ site.domain }}' + 'marked', marked);
+
+    function windowHistory() {
+      window.history.pushState('', '', '/?sub=' + subs.join() + '&type=' + types.join() + '&people=' + people.join() + '&marked=' + marked);
+    }
+
+    windowHistory();
+
+    // Event handler on checkbox change
+    $('form.topic :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (subs.indexOf(csub) < 0)
+          subs.push(csub);
+      }
+      else {
+
+        var idx = subs.indexOf(csub);
+        if (idx >= 0)
+          subs.splice(idx, 1);
+
+      }
+      hideUncheckedSubs();
+
+      store.set('{{ site.domain }}', subs);
+      windowHistory();
+    });
+
+    $('form.form-type :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (types.indexOf(csub) < 0)
+          types.push(csub);
+      }
+      else {
+
+        var idx = types.indexOf(csub);
+        if (idx >= 0)
+          types.splice(idx, 1);
+
+      }
+
+      hideUncheckedSubs();
+
+      store.set('{{ site.domain }}' + 'type', types);
+      windowHistory();
+    });
+
+    $('form.form-people :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (people.indexOf(csub) < 0)
+          people.push(csub);
+      }
+      else {
+
+        var idx = people.indexOf(csub);
+        if (idx >= 0)
+          people.splice(idx, 1);
+
+      }
+      hideUncheckedSubs();
+      store.set('{{ site.domain }}' + 'people', people);
+      windowHistory();
+    });
+
+    $('form.form-marked :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      if (checked == true) {
+        marked = 'true';
+      }
+      else {
+        marked = 'false'
+      }
+      hideUncheckedSubs();
+      store.set('{{ site.domain }}' + 'marked', marked);
+      windowHistory();
+    });
+
+
+    // Event handler on sub click
+    $('.conf-sub').click(function (e) {
+      var csub = $(this).data('sub');
+      for (var i = 0; i < subs.length; i++) {
+        if (subs[i] != csub) {
+          $('#' + subs[i] + '-checkbox').prop('checked', false);
+          $('.' + subs[i] + '-conf').hide();
+          $('#' + csub + '-checkbox').prop('checked', true);
+          $('.' + csub + '-conf').show();
+        }
+        else {
+          $('#' + subs[i] + '-checkbox').prop('checked', true);
+          $('.' + subs[i] + '-conf').show();
+        }
+      }
+      subs = [csub];
+      for (var i = 0; i < all_subs.length; i++) {
+        if (subs.indexOf(all_subs[i]) >= 0) {
+          $('.' + all_subs[i] + '-conf').show();
+        }
+      }
+      store.set('{{ site.domain }}' + 'sub', subs);
+      windowHistory();
+    });
+    });
+
+  </script>
+</body>
+
+</html>

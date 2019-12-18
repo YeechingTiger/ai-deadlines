@@ -1,0 +1,22 @@
+---
+- name: Machine Learning
+  sub: ML
+- name: Natural Language Proc
+  sub: NLP
+- name: Data Mining
+  sub: DM
+- name: Artificial Intelligence
+  sub: AI
+- name: Semantic Web
+  sub: SW
+- name: Ontology and reasoning
+  sub: OR
+- name: Social Network
+  sub: SN
+- name: Knowledge Representation
+  sub: KR
+- name: Biomedical and Health Informatics
+  sub: BHI
+- name: Information Technology
+  sub: IT
+- name: Sex 

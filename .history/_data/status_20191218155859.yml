@@ -1,0 +1,15 @@
+---
+- name: Targeted
+  sub: TG
+- name: Submitted
+  sub: SB
+- name: Attending
+  sub: AT
+- name: Not Decided
+  sub: JIANG
+- name: Yi Guo
+  sub: YI
+- name: Zhaoyi Chen
+  sub: ZHAOYI
+- name: Not Assigned
+  sub: NA

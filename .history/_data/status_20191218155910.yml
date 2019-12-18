@@ -1,0 +1,9 @@
+---
+- name: Targeted
+  sub: TG
+- name: Submitted
+  sub: SB
+- name: Attending
+  sub: AT
+- name: Not Decided
+  sub: ND
