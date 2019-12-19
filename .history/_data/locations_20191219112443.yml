@@ -1,0 +1,25 @@
+---
+- name: Conference/Workshop
+  sub: CFWS
+- name: Grant
+  sub: GT
+- name: Journal
+  sub: JL
+
+-name: Thailand
+-name: Bangkok,Thailand
+Kitakyushu, Japan
+Atlanta, Georgia
+Pattaya, Thailand
+Yokohama, Japan
+Rangsit Univetsity, Thailand
+Vienna, Austria
+San Diego, California
+Tianjin, China
+Oldenburg, Germany
+Orlando, Florida
+Suntec City Mall, Singapore
+Athens, Greece
+Minneapolis, MN
+Seoul, South Korea
+New York, New York

@@ -1,0 +1,54 @@
+---
+- name: Thailand
+  sub: THAILAND
+
+- name: Bangkok,Thailand
+  sub: BANGKOK
+
+- name: Pattaya, Thailand
+  sub: PATTAYA
+
+- name: Rangsit Univetsity, Thailand
+  sub: RANGSIT
+
+- name: Kitakyushu, Japan
+  sub: KITAKYUSHU
+
+- name: Yokohama, Japan
+  sub: YOKOHAMA
+
+- name: Atlanta, Georgia
+  sub: ATLANTA
+
+- name: Vienna, Austria
+  sub: VIENNA
+
+- name: San Diego, California
+  sub: SANDIEGO
+
+- name: Tianjin, China
+  sub: TIANJIN
+
+- name: Oldenburg, Germany
+  sub: OLDENBURG
+
+- name: Orlando, Florida
+  sub: ORLANDO
+
+- name: Suntec City Mall, Singapore
+  sub: SUNTEC
+
+- name: Athens, Greece
+  sub: ATHENS
+
+- name: Minneapolis, MN
+  sub: MINNEAPOLIS
+
+- name: Seoul, South Korea
+  sub: SEOUL
+
+- name: New York, New York
+  sub: NEWYORK
+
+- name: Not Applicable
+  sub: NA

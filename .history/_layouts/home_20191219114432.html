@@ -104,21 +104,6 @@
               {% endfor %}
             </div>
           </form>
-          <form class="form-horizontal form-place">
-            <h3>Location</h3>
-            <div class="form-group">
-              {% for place in site.data.locations %}
-              <div class="col-md-4 col-xs-6">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" id="{{ place.sub }}-checkbox" class=""><span
-                      class="checkbox-text">{{ place.name }}</span>
-                  </label>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </form>
           <!-- </div> -->
         </div>
       </div>
@@ -138,7 +123,6 @@
     {% endif %}
     <div id="{{conf.id}}" class="{% for sub in subs %} {{sub}}-conf {% endfor %} 
              {{conf.type}}-type 
-             {{conf.place}}-place
              {% for person in peopleShow %} {{person}}-people {% endfor %} 
              {{conf.status}}-status ">
       <div class="conf-flex">
@@ -167,9 +151,9 @@
                 <span class="conf-date">{{conf.date}}</span>
                 {% endif %}
                 &nbsp;
-                {% if conf.place != "NAP" %}
+                {% if conf.place %}
                 <span class="conf-place">
-                  <a class="conf-place-{{conf.place}}"></a>
+                  <a class="conf-place-{{conf.place}}" href="http://maps.google.com/?q={{conf.place}}">{{conf.place}}</a>
                 </span>
                 {% endif %}
               </div>
@@ -269,14 +253,11 @@
     var people_data = {{ site.data.people | jsonify }};
     var conf_data = {{ site.data | jsonify }};
     var status_data = {{ site.data.status | jsonify }};
-    var place_data = {{ site.data.locations | jsonify }};
 
     var all_subs = [];
     var all_types = [];
     var all_people = [];
     var all_status = [];
-    var all_place = [];
-
     var sub2name = {};
     var name2sub = {};
     var type_sub2name = {};
@@ -285,8 +266,6 @@
     var people_name2sub = {};
     var status_sub2name = {};
     var status_name2sub = {};
-    var place_sub2name = {};
-    var place_name2sub = {};
 
     for (var i = 0; i < conf_type_data.length; i++) {
       all_subs[i] = conf_type_data[i]['sub'];
@@ -312,13 +291,6 @@
       status_name2sub[status_data[i]['name']] = status_data[i]['sub'];
     }
 
-    for (var i = 0; i < place_data.length; i++) {
-      all_place[i] = place_data[i]['sub'];
-      place_sub2name[place_data[i]['sub']] = place_data[i]['name'];
-      place_name2sub[place_data[i]['name']] = place_data[i]['sub'];
-    }
-
-
     {% for conf in site.data.conferences %}
     {% assign subs = conf.sub | split: "," %}
     {% for sub in subs %}
@@ -331,7 +303,6 @@
     $('#{{conf.id}} .conf-type-{{conf.type}}').html(type_sub2name["{{conf.type}}"]);
 
     $('.conf-place-{{conf.place}}').html(place_sub2name["{{conf.place}}"]);
-    $('.conf-place-{{conf.place}}').attr("href", "http://maps.google.com/?q="+place_sub2name["{{conf.place}}"])
     // adjust date according to deadline timezone
     var timezone = {% if conf.timezone %}"{{conf.timezone}}" {% else %} "America/New_York" {% endif %};
     var confDate = moment.tz("{{conf.deadline}}", timezone);
@@ -384,7 +355,6 @@
     var types = url.searchParams.get('type');
     var people = url.searchParams.get('people');
     var status = url.searchParams.get('status');
-    var place = url.searchParams.get('place');
     if (subs == undefined) {
       subs = store.get('{{ site.domain }}' + 'sub');
     } else {
@@ -407,12 +377,6 @@
       status = store.get('{{ site.domain }}' + 'status');
     } else {
       status = status.toUpperCase().split(',');
-    }
-
-    if (place == undefined) {
-      place = store.get('{{ site.domain }}' + 'place');
-    } else {
-      place = place.toUpperCase().split(',');
     }
 
     // Get subjects from browser cache
@@ -459,17 +423,6 @@
         $('#' + status[i] + '-checkbox').prop('checked', true);
       }
     }
-
-    if (place === undefined) {
-      place = all_place;
-      for (var i = 0; i < place.length; i++) {
-        $('#' + place[i] + '-checkbox').prop('checked', true);
-      }
-    } else {
-      for (var i = 0; i < place.length; i++) {
-        $('#' + place[i] + '-checkbox').prop('checked', true);
-      }
-    }
     // Hide unchecked subs
     function hideUncheckedSubs() {
       for (var i = 0; i < all_subs.length; i++) {
@@ -493,12 +446,6 @@
       for (var i = 0; i < all_status.length; i++) {
         if (status.indexOf(all_status[i]) < 0) {
           $('.' + all_status[i] + '-status').hide();
-        }
-      }
-
-      for (var i = 0; i < all_place.length; i++) {
-        if (place.indexOf(all_place[i]) < 0) {
-          $('.' + all_place[i] + '-place').hide();
         }
       }
 
@@ -549,21 +496,9 @@
         }
       }
 
-      for (var i = 0; i < all_place.length; i++) {
-        if (place.indexOf(all_place[i]) >= 0) {
-          $('.' + all_place[i] + '-place').each(function () {
-            var id = $(this).attr('id');
-
-            if (all_deadlines[id] == 4) {
-              all_deadlines[id] = 5;
-            }
-          });
-        }
-      }
-
       Object.keys(all_deadlines).forEach(function (key) {
         var value = all_deadlines[key];
-        if (value == 5) {
+        if (value == 4) {
           $('#' + key).show();
         }
       });
@@ -575,10 +510,9 @@
     store.set('{{ site.domain }}' + 'type', types);
     store.set('{{ site.domain }}' + 'people', people);
     store.set('{{ site.domain }}' + 'status', status);
-    store.set('{{ site.domain }}' + 'place', place);
 
     function windowHistory() {
-      window.history.pushState('', '', '/?sub=' + subs.join() + '&type=' + types.join() + '&people=' + people.join() + '&status=' + status.join() + '&place=' + place.join());
+      window.history.pushState('', '', '/?sub=' + subs.join() + '&type=' + types.join() + '&people=' + people.join() + '&status=' + status.join());
     }
 
     windowHistory();
@@ -668,26 +602,6 @@
       }
       hideUncheckedSubs();
       store.set('{{ site.domain }}' + 'status', status);
-      windowHistory();
-    });
-
-    $('form.form-place :checkbox').change(function (e) {
-      var checked = $(this).is(':checked');
-      var cid = $(this).prop('id');
-      var csub = cid.substring(0, cid.length - 9);
-      if (checked == true) {
-        if (place.indexOf(csub) < 0)
-          place.push(csub);
-      }
-      else {
-
-        var idx = place.indexOf(csub);
-        if (idx >= 0)
-          place.splice(idx, 1);
-
-      }
-      hideUncheckedSubs();
-      store.set('{{ site.domain }}' + 'place', place);
       windowHistory();
     });
 

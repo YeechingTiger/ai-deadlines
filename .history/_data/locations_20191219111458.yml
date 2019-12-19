@@ -1,0 +1,11 @@
+---
+- name: Conference/Workshop
+  sub: CFWS
+- name: Grant
+  sub: GT
+- name: Journal
+  sub: JL
+
+Thailand
+Bangkok,Thailand
+Kitakyushu, Japan

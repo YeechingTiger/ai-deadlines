@@ -97,7 +97,6 @@
   deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
-  place: NAP
   extra-deadline: <ul><b>Other Deadlines:</b><li> 2021-01-25 17:00:00</li></ul>
   project_title: Grant
   people: YI
@@ -112,7 +111,6 @@
   deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
-  place: NAP
   extra-deadline: '<ul><b>Other Deadlines:</b><li>FY 2020: 2020-01-31 17:00:00</li><li>FY
     2021: 2021-01-25 17:00:00</li></ul>'
   project_title: Grant
@@ -197,7 +195,6 @@
     Date): January 26, 2020</li> </ul>'
   timezone: EST
   type: GT
-  place: NAP
   sub: CC
   project_title: Grant
   people: ZHAOYI
@@ -211,7 +208,6 @@
   deadline: '2020-03-06 17:00:00'
   timezone: EST
   type: GT
-  place: NAP
   project_title: Grant
   people: JIANG
   sub: AD
@@ -269,7 +265,7 @@
   deadline: '2020-04-30 23:59:59'
   timezone: EST
   date: August 26-29, 2020
-  place: MINNEAPOLIS
+  place: Minneapolis, MN
   sub: ML,DM,OR,KR,NLP
   type: CFWS
   status: ND
@@ -282,7 +278,7 @@
   deadline: '2020-09-01 23:59:59'
   timezone: EST
   date: December 16-19, 2020
-  place: SEOUL
+  place: Seoul, South Korea
   sub: OR,AI,ML
   type: CFWS
   status: ND
@@ -295,7 +291,7 @@
   deadline: '2019-09-05 23:59:59'
   timezone: UTC-10
   date: February 7-12, 2020
-  place: NEWYORK
+  place: New York, New York
   sub: AI
   type: CFWS
   status: ND

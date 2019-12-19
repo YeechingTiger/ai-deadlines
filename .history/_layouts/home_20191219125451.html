@@ -167,7 +167,7 @@
                 <span class="conf-date">{{conf.date}}</span>
                 {% endif %}
                 &nbsp;
-                {% if conf.place != "NAP" %}
+                {% if conf.place != "NA" %}
                 <span class="conf-place">
                   <a class="conf-place-{{conf.place}}"></a>
                 </span>
@@ -554,8 +554,8 @@
           $('.' + all_place[i] + '-place').each(function () {
             var id = $(this).attr('id');
 
-            if (all_deadlines[id] == 4) {
-              all_deadlines[id] = 5;
+            if (all_deadlines[id] == 3) {
+              all_deadlines[id] = 4;
             }
           });
         }
@@ -563,7 +563,7 @@
 
       Object.keys(all_deadlines).forEach(function (key) {
         var value = all_deadlines[key];
-        if (value == 5) {
+        if (value == 4) {
           $('#' + key).show();
         }
       });
@@ -675,6 +675,7 @@
       var checked = $(this).is(':checked');
       var cid = $(this).prop('id');
       var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
       if (checked == true) {
         if (place.indexOf(csub) < 0)
           place.push(csub);
@@ -687,7 +688,7 @@
 
       }
       hideUncheckedSubs();
-      store.set('{{ site.domain }}' + 'place', place);
+      store.set('{{ site.domain }}' + 'place', status);
       windowHistory();
     });
 

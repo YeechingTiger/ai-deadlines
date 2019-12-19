@@ -22,7 +22,7 @@
   deadline: '2020-01-10 23:59:59'
   timezone: EST
   date: May 29-31, 2020
-  place: BANGKOK
+  place: Bangkok,Thailand
   sub: DM
   type: CFWS
   status: ND
@@ -36,7 +36,7 @@
   deadline: '2020-01-15 23:59:59'
   timezone: EST
   date: July 21-24, 2020
-  place: KITAKYUSHU
+  place: Kitakyushu, Japan
   sub: DM,KR,ML,NLP,SW,SN,OR
   type: CFWS
   status: ND
@@ -49,7 +49,7 @@
   deadline: '2020-01-15 23:59:59'
   timezone: EST
   date: June, 2020
-  place: ATLANTA
+  place: Atlanta, Georgia
   sub: SN,ML
   type: CFWS
   project_title: Paper
@@ -68,7 +68,7 @@
     December 16, 2019</li> </ul>'
   timezone: EST
   date: March 11-14, 2020
-  place: PATTAYA
+  place: Pattaya, Thailand
   sub: IT
   type: CFWS
   status: SB
@@ -84,7 +84,7 @@
   deadline: '2020-01-21 23:59:59'
   timezone: EST
   date: July 11-17, 2020
-  place: YOKOHAMA
+  place: Yokohama, Japan
   sub: AI
   type: CFWS
   status: ND
@@ -97,7 +97,6 @@
   deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
-  place: NAP
   extra-deadline: <ul><b>Other Deadlines:</b><li> 2021-01-25 17:00:00</li></ul>
   project_title: Grant
   people: YI
@@ -112,7 +111,6 @@
   deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
-  place: NAP
   extra-deadline: '<ul><b>Other Deadlines:</b><li>FY 2020: 2020-01-31 17:00:00</li><li>FY
     2021: 2021-01-25 17:00:00</li></ul>'
   project_title: Grant
@@ -129,7 +127,7 @@
   deadline: '2020-01-31 23:59:59'
   timezone: EST
   date: May 1, 2020
-  place: RANGSIT
+  place: Rangsit Univetsity, Thailand
   sub: SN
   type: CFWS
   status: ND
@@ -142,7 +140,7 @@
   deadline: '2020-02-07 03:59:59'
   timezone: America/Los_Angeles
   date: July 12-18, 2020
-  place: VIENNA
+  place: Vienna, Austria
   sub: AI
   type: CFWS
   status: ND
@@ -155,7 +153,7 @@
   deadline: '2020-02-13 23:59:59'
   timezone: UTC-11
   date: August 22-27, 2020
-  place: SANDIEGO
+  place: San Diego, California
   sub: AI,SN
   type: CFWS
   status: ND
@@ -168,7 +166,7 @@
   deadline: '2020-02-16 23:59:59'
   timezone: America/Los_Angeles
   date: August 13-14, 2020
-  place: TIANJIN
+  place: Tianjin, China
   sub: DM,ML,SW,SN
   type: CFWS
   status: ND
@@ -181,7 +179,7 @@
   deadline: '2020-02-20 23:59:59'
   timezone: EST
   date: June 15-18, 2020
-  place: OLDENBURG
+  place: Oldenburg, Germany
   sub: BHI
   type: CFWS
   status: ND
@@ -197,7 +195,6 @@
     Date): January 26, 2020</li> </ul>'
   timezone: EST
   type: GT
-  place: NAP
   sub: CC
   project_title: Grant
   people: ZHAOYI
@@ -211,7 +208,6 @@
   deadline: '2020-03-06 17:00:00'
   timezone: EST
   type: GT
-  place: NAP
   project_title: Grant
   people: JIANG
   sub: AD
@@ -225,7 +221,7 @@
   deadline: '2020-03-09 00:00:00'
   timezone: EST
   date: March 9-13, 2020
-  place: ORLANDO
+  place: Orlando, Florida
   type: CFWS
   sub: HIT
   project_title: Attending Only
@@ -241,7 +237,7 @@
   deadline: '2020-03-26 23:59:59'
   timezone: EST
   date: March 28-29, 2020
-  place: SUNTEC
+  place: Suntec City Mall, Singapore
   sub: BHI
   type: CFWS
   status: ND
@@ -254,7 +250,7 @@
   deadline: '2020-03-27 23:59:59'
   timezone: UTC+2
   date: November 2-6, 2020
-  place: ATHENS
+  place: Athens, Greece
   sub: SW
   type: CFWS
   people: HANSI,XING
@@ -269,7 +265,7 @@
   deadline: '2020-04-30 23:59:59'
   timezone: EST
   date: August 26-29, 2020
-  place: MINNEAPOLIS
+  place: Minneapolis, MN
   sub: ML,DM,OR,KR,NLP
   type: CFWS
   status: ND
@@ -282,7 +278,7 @@
   deadline: '2020-09-01 23:59:59'
   timezone: EST
   date: December 16-19, 2020
-  place: SEOUL
+  place: Seoul, South Korea
   sub: OR,AI,ML
   type: CFWS
   status: ND
@@ -295,7 +291,7 @@
   deadline: '2019-09-05 23:59:59'
   timezone: UTC-10
   date: February 7-12, 2020
-  place: NEWYORK
+  place: New York, New York
   sub: AI
   type: CFWS
   status: ND
