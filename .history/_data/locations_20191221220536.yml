@@ -1,0 +1,36 @@
+---
+- name: Thailand
+  sub: THAILAND
+
+- name: Japan
+  sub: JAPAN
+
+- name: Austria
+  sub: AUSTRIA
+
+- name: USA
+  sub: USA
+
+- name: China
+  sub: CHINA
+
+- name: Germany
+  sub: GERMANY
+
+- name: Suntec City Mall, Singapore
+  sub: 
+
+- name: Athens, Greece
+  sub: ATHENS
+
+- name: Minneapolis, MN
+  sub: MINNEAPOLIS
+
+- name: Seoul, South Korea
+  sub: SEOUL
+
+- name: New York, New York
+  sub: NEWYORK
+
+- name: Not Applicable
+  sub: NAP

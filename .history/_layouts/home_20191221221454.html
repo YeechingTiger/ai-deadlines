@@ -1,0 +1,876 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap.min.css" | prepend:site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap-grid.min.css" | prepend:site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap-reboot.min.css" | prepend:site.baseurl }}">
+  <link rel="stylesheet" type="text/css"
+    href="{{ "/static/css/deadlines.css" | prepend:site.baseurl }}?t={{site.time | date: '%s'}}"
+    media="screen,projection">
+  <link rel="shortcut icon" href="{{ "/static/img/favicon.png" | prepend:site.baseurl }}">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"
+    integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{ "/static/js/jquery.countdown.min.js" | prepend:site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ "/static/js/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/moment.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/moment-timezone-with-data.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/store.min.js" | prepend:site.baseurl }}"></script>
+  <script src="{{ "/static/js/ouical.min.js" | prepend:site.baseurl }}"></script>
+
+</head>
+
+<body>
+  <div class="top-strip"></div>
+  <div class="container">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <h1>
+            {{ site.title }}
+          </h1>
+        </div>
+        <div class="meta col-12">
+          {{ site.description }}.
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <form class="form-horizontal form-status">
+            <div class="collapse-button">
+              <a class="status-collapse" data-toggle="collapse" href="#collapse-status" role="button"
+                aria-expanded="true" aria-controls="collapse-status">
+                <img src="/static/img/icons8-minus-24.png" alt="+">
+                <span><h3>Status</h3></span>
+              </a>
+              
+            </div>
+            
+            <div class="collapse show" id="collapse-status">
+              <div class="form-group status-filter card card-body">
+                <div class="col-md-12 col-12">
+                  <button type="button" class="btn btn-primary btn-sm btn-status">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-status-remove">Clear All</button>
+                </div>
+                <br>
+                <div class="row">
+                  {% for status in site.data.status %}
+                  <div class="col-md-4 col-6">
+                    <div class="type-flex">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="{{ status.sub }}-checkbox" class="">
+                        <span class="checkbox-custom rectangular"></span>
+                      </label>
+                      <span
+                          class="checkbox-text">{{ status.name }}</span>
+                        {% if status.sub != 'ND' %}
+                        <div class="type-icon"><img src="/static/img/{{ status.sub }}.png" alt=""></div>
+                        {% endif %}
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12">
+          <form class="form-horizontal form-type">
+            <div class="collapse-button">
+              <a class="type-collapse" data-toggle="collapse" href="#collapse-type" role="button" aria-expanded="true"
+                aria-controls="collapse-type">
+                <img src="/static/img/icons8-minus-24.png" alt="+">
+                <span><h3>Type</h3></span>
+              </a>
+            </div>
+
+            <div class="collapse show" id="collapse-type">
+              <div class="form-group type-filter card card-body">
+                <div class="col-md-12 col-12">
+                  <button type="button" class="btn btn-primary btn-sm btn-type">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-type-remove">Clear All</button>
+                </div>
+                <br>
+                <div class="row">
+                  {% for type in site.data.deadline_types %}
+                  <div class="col-md-4 col-6">
+                    <div class="type-flex">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="{{ type.sub }}-checkbox" class="">
+                        <span class="checkbox-custom rectangular"></span>
+                      </label>
+                      <span
+                          class="checkbox-text">{{ type.name }}</span>
+                        <div class="type-icon"><img src="/static/img/{{ type.sub }}.png" alt=""></div>
+                      
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="col-12">
+          <form class="form-horizontal topic">
+            <div class="collapse-button">
+              <a class="topic-collapse" data-toggle="collapse" href="#collapse-topic" role="button" aria-expanded="true"
+                aria-controls="collapse-topic">
+                <img src="/static/img/icons8-minus-24.png" alt="+">
+                <span><h3>Topic</h3></span>
+              </a>
+              
+            </div>
+
+            <div class="collapse show" id="collapse-topic">
+              <div class="form-group topic-filter card card-body">
+                <div class="col-md-12 col-12">
+                  <button type="button" class="btn btn-primary btn-sm btn-topic">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-topic-remove">Clear All</button>
+                </div>
+                <br>
+                <div class="row">
+                  {% for type in site.data.types %}
+                  <div class="col-md-4 col-6">
+                    <div class="type-flex">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="{{ type.sub }}-checkbox" class="">
+                        <span class="checkbox-custom rectangular"></span>
+                      </label>
+                      <span class="checkbox-text">{{ type.name }}</span>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12">
+          <form class="form-horizontal form-people">
+            <div class="collapse-button">
+              <a class="people-collapse" data-toggle="collapse" href="#collapse-people" role="button"
+                aria-expanded="true" aria-controls="collapse-people">
+                <img src="/static/img/icons8-minus-24.png" alt="+">
+                <span><h3>People</h3></span>
+              </a>
+              
+            </div>
+
+            <div class="collapse show" id="collapse-people">
+              <div class="form-group people-filter card card-body">
+                <div class="col-md-12 col-12">
+                  <button type="button" class="btn btn-primary btn-sm btn-people">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-people-remove">Clear All</button>
+                </div>
+                <br>
+                <div class="row">
+                  {% for type in site.data.people %}
+                  <div class="col-md-4 col-6">
+                    <div class="type-flex">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="{{ type.sub }}-checkbox" class="">
+                        <span class="checkbox-custom rectangular"></span>
+                      </label>
+                      <span class="checkbox-text">{{ type.name }}</span>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12">
+          <form class="form-horizontal form-place">
+            <div class="collapse-button">
+              <a class="location-collapse" data-toggle="collapse" href="#collapse-location" role="button"
+                aria-expanded="true" aria-controls="collapse-location">
+                <img src="/static/img/icons8-minus-24.png" alt="+">
+                <span><h3>Location</h3></span>
+              </a>
+              
+            </div>
+
+            <div class="collapse show" id="collapse-location">
+              <div class="form-group location-filter card card-body">
+                <div class="col-md-12 col-12">
+                  <button type="button" class="btn btn-primary btn-sm btn-location">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-location-remove">Clear All</button>
+                </div>
+                <br>
+                <div class="row">
+                  {% for place in site.data.locations %}
+                  <div class="col-md-4 col-6">
+                    <div class="type-flex">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="{{ place.sub }}-checkbox" class="">
+                        <span class="checkbox-custom rectangular"></span>
+                      </label>
+                      <span class="checkbox-text">{{ place.name }}</span>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <br>
+    {% for conf in site.data.conferences %}
+    {% assign subs = conf.sub | split: "," %}
+    {% assign peopleArray = conf.people | split: ";" %}
+    {% assign projectArray = conf.project_title | split: ";" %}
+    {% if conf.people %}
+    {% assign peopleShow = "" | split: "," %}
+    {% for people in peopleArray %}
+    {% assign peopleList = people | split: "," %}
+    {% assign peopleShow = peopleShow | concat: peopleList %}
+    {% endfor %}
+    {% else %}
+    {% assign peopleShow = "NA" | split: "," %}
+    {% endif %}
+    <div id="{{conf.id}}" class="{% for sub in subs %} {{sub}}-conf {% endfor %} 
+             {{conf.type}}-type 
+             {{conf.place}}-place
+             {% for person in peopleShow %} {{person}}-people {% endfor %} 
+             {{conf.status}}-status ">
+      <div class="conf-flex">
+        <div class="conf-mark">
+          {% if conf.status != 'ND' %}
+          <div class="marked"><img src="/static/img/{{ conf.status }}.png" alt=""></div>
+          {% endif %}
+          {% if conf.type %}
+          <div class="marked"><img src="/static/img/{{ conf.type }}.png" alt=""></div>
+          {% endif %}
+        </div>
+        <div class="conf-content">
+          <h5 class="card-type conf-type-{{conf.type}}"></h5>
+          <div class="row conf-row">
+            <div class="col-12 col-sm-6">
+              <a class="conf-title" href="/conference?id={{ conf.id }}">{{conf.title}} {{conf.year}}</a>
+            </div>
+            <div class="col-12 col-sm-6">
+              <span class="timer"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="meta">
+                {% if conf.date %}
+                <span class="conf-date">{{conf.date}}</span>
+                {% endif %}
+                &nbsp;
+                {% if conf.place != "NAP" %}
+                <span class="conf-place">
+                  <a href="http://maps.google.com/?q=$` + {{conf.place}} target="_blank">{{conf.place}}</a>
+                </span>
+                {% endif %}
+              </div>
+              <div class="note">
+                <a href="{{conf.link}}" target="_blank">{{conf.full_title}}</a>
+              </div>
+              {% if conf.note %}
+              <div class="note">
+                {{conf.note}}
+              </div>
+              {% endif %}
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="deadline">
+                <div>Deadline:
+                  <span class="deadline-time"></span>
+                  {% if conf.extra-deadline %}
+                  <div class="note">
+                    {{conf.extra-deadline}}
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="calendar"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="meta">
+              <div class="col-12">
+                <ul>
+                  {% if conf.project_title %}
+                  <b>Projects:</b>
+                  {% endif %}
+                  {% for project in projectArray %}
+                  {% assign index = forloop.index | minus: 1 %}
+                  <li>{{project}}
+                    <ul>
+                      <li style="color: red">{{peopleArray[index]}}</li>
+                    </ul>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {% for sub in subs %}
+              <span title="Click to only show {{sub}} conferences" data-sub="{{sub}}"
+                class="conf-sub-{{sub}} conf-sub"></span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    {% endfor %}
+    <footer>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+        </div>
+      </div>
+    </footer>
+    <br><br>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    $(function () {
+      // Make sure this is >= no. of subs
+      // Currently not used
+      var colors = ['#341f97', '#ee5253', '#2e86de',
+        '#ff9f43', '#10ac84', '#222f3e']
+      // Borrowed from https://github.com/moment/moment-timezone/issues/167
+      // Adds support for time zones 'UTC-12'..'UTC+12'
+      function addUtcTimeZones() {
+        // Moment.js uses the IANA timezone database, which supports generic time zones like 'Etc/GMT+1'.
+        // However, the signs for these time zones are inverted compared to ISO 8601.
+        // For more details, see https://github.com/moment/moment-timezone/issues/167
+        for (let offset = -12; offset <= 12; offset++) {
+          const posixSign = offset <= 0 ? '+' : '-';
+          const isoSign = offset >= 0 ? '+' : '-';
+          const link = `Etc/GMT${posixSign}${Math.abs(offset)}|UTC${isoSign}${Math.abs(offset)}`;
+          moment.tz.link(link);
+        }
+      }
+      addUtcTimeZones();
+
+      try {
+        var local_timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        $('.local-timezone').text(local_timezone.toString());
+      }
+      catch (err) {
+        $('.local-timezone-hide').hide();
+      }
+
+
+      // Get all subs
+    var conf_type_data = {{ site.data.types | jsonify}};
+    var type_data = {{ site.data.deadline_types | jsonify }};
+    var people_data = {{ site.data.people | jsonify }};
+    var conf_data = {{ site.data | jsonify }};
+    var status_data = {{ site.data.status | jsonify }};
+    var place_data = {{ site.data.locations | jsonify }};
+
+    var all_subs = [];
+    var all_types = [];
+    var all_people = [];
+    var all_status = [];
+    var all_place = [];
+
+    var sub2name = {};
+    var name2sub = {};
+    var type_sub2name = {};
+    var type_name2sub = {};
+    var people_sub2name = {};
+    var people_name2sub = {};
+    var status_sub2name = {};
+    var status_name2sub = {};
+    var place_sub2name = {};
+    var place_name2sub = {};
+
+    for (var i = 0; i < conf_type_data.length; i++) {
+      all_subs[i] = conf_type_data[i]['sub'];
+      sub2name[conf_type_data[i]['sub']] = conf_type_data[i]['name'];
+      name2sub[conf_type_data[i]['name']] = conf_type_data[i]['sub'];
+    }
+
+    for (var i = 0; i < type_data.length; i++) {
+      all_types[i] = type_data[i]['sub'];
+      type_sub2name[type_data[i]['sub']] = type_data[i]['name'];
+      type_name2sub[type_data[i]['name']] = type_data[i]['sub'];
+    }
+
+    for (var i = 0; i < people_data.length; i++) {
+      all_people[i] = people_data[i]['sub'];
+      people_sub2name[people_data[i]['sub']] = people_data[i]['name'];
+      people_name2sub[people_data[i]['name']] = people_data[i]['sub'];
+    }
+
+    for (var i = 0; i < status_data.length; i++) {
+      all_status[i] = status_data[i]['sub'];
+      status_sub2name[status_data[i]['sub']] = status_data[i]['name'];
+      status_name2sub[status_data[i]['name']] = status_data[i]['sub'];
+    }
+
+    for (var i = 0; i < place_data.length; i++) {
+      all_place[i] = place_data[i]['sub'];
+      place_sub2name[place_data[i]['sub']] = place_data[i]['name'];
+      place_name2sub[place_data[i]['name']] = place_data[i]['sub'];
+    }
+
+
+    {% for conf in site.data.conferences %}
+    {% assign subs = conf.sub | split: "," %}
+    {% for sub in subs %}
+    $('#{{conf.id}} .conf-sub-{{sub}}').html(sub2name["{{sub}}"].toLocaleLowerCase());
+    {% endfor %}
+    {% if conf.deadline == "TBA" %}
+    $('#{{conf.id}} .timer').html("TBA");
+    $('#{{conf.id}} .deadline-time').html("TBA");
+    {% else %}
+    $('#{{conf.id}} .conf-type-{{conf.type}}').html(type_sub2name["{{conf.type}}"]);
+
+    // adjust date according to deadline timezone
+    var timezone = {% if conf.timezone %}"{{conf.timezone}}" {% else %} "America/New_York" {% endif %};
+    var confDate = moment.tz("{{conf.deadline}}", timezone);
+
+    // render countdown timer
+    $('#{{conf.id}} .timer').countdown(confDate.toDate(), function (event) {
+      $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+    });
+
+    // convert deadline to local timezone
+    try {
+      var localConfDate = moment.tz(confDate, local_timezone);
+      $('#{{conf.id}} .deadline-time').html(localConfDate.toString());
+    }
+    catch (err) {
+      console.log("Error converting to local timezone.");
+    }
+
+    // add calendar button
+    var myCalendar = createCalendar({
+      options: {
+        class: 'calendar-obj',
+
+        // You can pass an ID. If you don't, one will be generated for you
+        id: '{{conf.id}}'
+      },
+      data: {
+        // Event title
+        title: '{{conf.title}} {{conf.year}} deadline',
+
+        // Event start date
+        start: confDate.toDate(), // new Date('June 15, 2013 19:00'),
+
+        // Event duration
+        duration: 60,
+      }
+    });
+    document.querySelector('#{{conf.id}} .calendar').appendChild(myCalendar);
+
+    // check if date has passed, add 'past' class to it
+    var today = moment();
+    if (today.diff(confDate) > 0)
+      $('#{{conf.id}}').addClass('past');
+    {% endif %}
+    {% endfor %}
+
+    // Get subjects from URL
+    var url = new URL(window.location);
+    var subs = url.searchParams.get('sub');
+    var types = url.searchParams.get('type');
+    var people = url.searchParams.get('people');
+    var status = url.searchParams.get('status');
+    var place = url.searchParams.get('place');
+    if (subs == undefined) {
+      subs = store.get('{{ site.domain }}' + 'sub');
+    } else {
+      subs = subs.toUpperCase().split(',');
+    }
+
+    if (types == undefined) {
+      types = store.get('{{ site.domain }}' + 'type');
+    } else {
+      types = types.toUpperCase().split(',');
+    }
+
+    if (people == undefined) {
+      people = store.get('{{ site.domain }}' + 'people');
+    } else {
+      people = people.toUpperCase().split(',');
+    }
+
+    if (status == undefined) {
+      status = store.get('{{ site.domain }}' + 'status');
+    } else {
+      status = status.toUpperCase().split(',');
+    }
+
+    if (place == undefined) {
+      place = store.get('{{ site.domain }}' + 'place');
+    } else {
+      place = place.toUpperCase().split(',');
+    }
+
+    // Get subjects from browser cache
+    if (subs === undefined) {
+      subs = all_subs;
+      for (var i = 0; i < subs.length; i++) {
+        $('#' + subs[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < subs.length; i++) {
+        $('#' + subs[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (types === undefined) {
+      types = all_types;
+      for (var i = 0; i < types.length; i++) {
+        $('#' + types[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < types.length; i++) {
+        $('#' + types[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (people === undefined) {
+      people = all_people;
+      for (var i = 0; i < people.length; i++) {
+        $('#' + people[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < people.length; i++) {
+        $('#' + people[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (status === undefined) {
+      status = all_status;
+      for (var i = 0; i < status.length; i++) {
+        $('#' + status[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < status.length; i++) {
+        $('#' + status[i] + '-checkbox').prop('checked', true);
+      }
+    }
+
+    if (place === undefined) {
+      place = all_place;
+      for (var i = 0; i < place.length; i++) {
+        $('#' + place[i] + '-checkbox').prop('checked', true);
+      }
+    } else {
+      for (var i = 0; i < place.length; i++) {
+        $('#' + place[i] + '-checkbox').prop('checked', true);
+      }
+    }
+    // Hide unchecked subs
+    function hideUncheckedSubs() {
+      for (var i = 0; i < all_subs.length; i++) {
+        if (subs.indexOf(all_subs[i]) < 0) {
+          $('.' + all_subs[i] + '-conf').hide();
+        }
+      }
+
+      for (var i = 0; i < all_types.length; i++) {
+        if (types.indexOf(all_types[i]) < 0) {
+          $('.' + all_types[i] + '-type').hide();
+        }
+      }
+
+      for (var i = 0; i < all_people.length; i++) {
+        if (people.indexOf(all_people[i]) < 0) {
+          $('.' + all_people[i] + '-people').hide();
+        }
+      }
+
+      for (var i = 0; i < all_status.length; i++) {
+        if (status.indexOf(all_status[i]) < 0) {
+          $('.' + all_status[i] + '-status').hide();
+        }
+      }
+
+      for (var i = 0; i < all_place.length; i++) {
+        if (place.indexOf(all_place[i]) < 0) {
+          $('.' + all_place[i] + '-place').hide();
+        }
+      }
+
+      var all_deadlines = {};
+
+      for (var i = 0; i < all_types.length; i++) {
+        if (types.indexOf(all_types[i]) >= 0) {
+          $('.' + all_types[i] + '-type').each(function () {
+            var id = $(this).attr('id')
+            all_deadlines[id] = 1;
+          });
+        }
+      }
+
+      for (var i = 0; i < all_subs.length; i++) {
+        if (subs.indexOf(all_subs[i]) >= 0) {
+          $('.' + all_subs[i] + '-conf').each(function () {
+            var id = $(this).attr('id');
+            if (all_deadlines[id] == 1) {
+              all_deadlines[id] = 2;
+            }
+          });
+
+        }
+      }
+
+      for (var i = 0; i < all_people.length; i++) {
+        if (people.indexOf(all_people[i]) >= 0) {
+          $('.' + all_people[i] + '-people').each(function () {
+            var id = $(this).attr('id');
+
+            if (all_deadlines[id] == 2) {
+              all_deadlines[id] = 3;
+            }
+          });
+        }
+      }
+
+      for (var i = 0; i < all_status.length; i++) {
+        if (status.indexOf(all_status[i]) >= 0) {
+          $('.' + all_status[i] + '-status').each(function () {
+            var id = $(this).attr('id');
+
+            if (all_deadlines[id] == 3) {
+              all_deadlines[id] = 4;
+            }
+          });
+        }
+      }
+
+      for (var i = 0; i < all_place.length; i++) {
+        if (place.indexOf(all_place[i]) >= 0) {
+          $('.' + all_place[i] + '-place').each(function () {
+            var id = $(this).attr('id');
+
+            if (all_deadlines[id] == 4) {
+              all_deadlines[id] = 5;
+            }
+          });
+        }
+      }
+
+      Object.keys(all_deadlines).forEach(function (key) {
+        var value = all_deadlines[key];
+        if (value == 5) {
+          $('#' + key).show();
+        }
+      });
+    }
+
+    hideUncheckedSubs();
+
+    store.set('{{ site.domain }}' + 'sub', subs);
+    store.set('{{ site.domain }}' + 'type', types);
+    store.set('{{ site.domain }}' + 'people', people);
+    store.set('{{ site.domain }}' + 'status', status);
+    store.set('{{ site.domain }}' + 'place', place);
+
+    function windowHistory() {
+      window.history.pushState('', '', '/?sub=' + subs.join() + '&type=' + types.join() + '&people=' + people.join() + '&status=' + status.join() + '&place=' + place.join());
+    }
+
+    windowHistory();
+
+    // Event handler on checkbox change
+    $('form.topic :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (subs.indexOf(csub) < 0)
+          subs.push(csub);
+      }
+      else {
+
+        var idx = subs.indexOf(csub);
+        if (idx >= 0)
+          subs.splice(idx, 1);
+
+      }
+      hideUncheckedSubs();
+
+      store.set('{{ site.domain }}', subs);
+      windowHistory();
+    });
+
+    $('form.form-type :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (types.indexOf(csub) < 0)
+          types.push(csub);
+      }
+      else {
+
+        var idx = types.indexOf(csub);
+        if (idx >= 0)
+          types.splice(idx, 1);
+
+      }
+
+      hideUncheckedSubs();
+
+      store.set('{{ site.domain }}' + 'type', types);
+      windowHistory();
+    });
+
+    $('form.form-people :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (people.indexOf(csub) < 0)
+          people.push(csub);
+      }
+      else {
+
+        var idx = people.indexOf(csub);
+        if (idx >= 0)
+          people.splice(idx, 1);
+
+      }
+      hideUncheckedSubs();
+      store.set('{{ site.domain }}' + 'people', people);
+      windowHistory();
+    });
+
+    $('form.form-status :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      console.log(csub);
+      if (checked == true) {
+        if (status.indexOf(csub) < 0)
+          status.push(csub);
+      }
+      else {
+
+        var idx = status.indexOf(csub);
+        if (idx >= 0)
+          status.splice(idx, 1);
+
+      }
+      hideUncheckedSubs();
+      store.set('{{ site.domain }}' + 'status', status);
+      windowHistory();
+    });
+
+    $('form.form-place :checkbox').change(function (e) {
+      var checked = $(this).is(':checked');
+      var cid = $(this).prop('id');
+      var csub = cid.substring(0, cid.length - 9);
+      if (checked == true) {
+        if (place.indexOf(csub) < 0)
+          place.push(csub);
+      }
+      else {
+
+        var idx = place.indexOf(csub);
+        if (idx >= 0)
+          place.splice(idx, 1);
+
+      }
+      hideUncheckedSubs();
+      store.set('{{ site.domain }}' + 'place', place);
+      windowHistory();
+    });
+
+
+    // Event handler on sub click
+    $('.conf-sub').click(function (e) {
+      var csub = $(this).data('sub');
+      for (var i = 0; i < all_subs.length; i++) {
+        $('#' + all_subs[i] + '-checkbox').prop('checked', false);
+      }
+      $('#' + csub + '-checkbox').prop('checked', true);
+      subs = [csub];
+
+      hideUncheckedSubs();
+
+      store.set('{{ site.domain }}' + 'sub', subs);
+      windowHistory();
+    });
+
+    // collapse filters
+    function addCollpase(filterName) {
+      $(`.${filterName}-collapse`).click(function () {
+        if ($(`.${filterName}-filter`).is(':visible')) {
+          $(this).find('img').attr('src', '/static/img/icons8-plus-24.png');
+        } else {
+          $(this).find('img').attr('src', '/static/img/icons8-minus-24.png');
+        }
+      });
+    }
+
+    addCollpase('status');
+    addCollpase('type');
+    addCollpase('topic');
+    addCollpase('people');
+    addCollpase('location');
+
+    function buttonFunction(filterName, filterAll, filter) {
+      console.log()
+      $(`.btn-${filterName}`).click(function () {
+        for (var i = 0; i < filterAll.length; i++) {
+          $('#' + filterAll[i] + '-checkbox').prop('checked', true);
+        }
+        filter.splice(0, filter.length);
+        filter.push(...filterAll);
+        hideUncheckedSubs();
+        store.set('{{ site.domain }}' + filterName, filter);
+        windowHistory();
+      });
+
+      $(`.btn-${filterName}-remove`).click(function () {
+        for (var i = 0; i < filterAll.length; i++) {
+          $('#' + filterAll[i] + '-checkbox').prop('checked', false);
+        }
+        filter.splice(0, filter.length);
+        console.log(filter);
+        hideUncheckedSubs();
+        store.set('{{ site.domain }}' + filterName, filter);
+        windowHistory();
+      });
+    }
+
+    buttonFunction('status', all_status, status);
+    buttonFunction('type', all_types, types);
+    buttonFunction('topic', all_subs, subs);
+    buttonFunction('people', all_people, people);
+    buttonFunction('location', all_place, place);
+
+  });
+
+  </script>
+</body>
+
+</html>

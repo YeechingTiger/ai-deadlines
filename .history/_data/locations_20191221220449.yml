@@ -1,0 +1,42 @@
+---
+- name: Thailand
+  sub: THAILAND
+
+- name: Japan
+  sub: JAPAN
+
+- name: Austria
+  sub: AUSTRIA
+
+- name: USA
+  
+
+- name: San Diego, California
+  sub: SANDIEGO
+
+- name: Tianjin, China
+  sub: TIANJIN
+
+- name: Oldenburg, Germany
+  sub: OLDENBURG
+
+- name: Orlando, Florida
+  sub: ORLANDO
+
+- name: Suntec City Mall, Singapore
+  sub: SUNTEC
+
+- name: Athens, Greece
+  sub: ATHENS
+
+- name: Minneapolis, MN
+  sub: MINNEAPOLIS
+
+- name: Seoul, South Korea
+  sub: SEOUL
+
+- name: New York, New York
+  sub: NEWYORK
+
+- name: Not Applicable
+  sub: NAP

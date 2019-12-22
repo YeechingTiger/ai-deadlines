@@ -1,0 +1,427 @@
+body {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body *::selection {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.container {
+  max-width: 980px;
+}
+
+.top-strip {
+  background-color: #333;
+  height: 0.25em;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  /* font-weight: 300; */
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.page-header {
+  margin-top: 20px;
+}
+
+#conf-title.page-header {
+  border-bottom: none;
+}
+
+p.authors {
+  margin-bottom: 5px;
+  color: #808080;
+  font-size: 20px;
+}
+
+p.authors a {
+  border-color: #dedede;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  color: inherit;
+}
+
+p.lead.authors a {
+  border-bottom: none;
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.thumb {
+  margin: 20px 0;
+  border: 1px solid #808080;
+}
+
+pre {
+  color: #333;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+footer {
+  font-size: 13px;
+}
+
+.past {
+  opacity: 0.5;
+}
+
+.conf-row {
+  margin-bottom: 5px;
+}
+
+.conf-row div {
+  margin-bottom: 5px;
+}
+
+.conf-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.deadline,
+.meta {
+  font-size: 13px;
+}
+
+.note {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#conf-timer {
+  font-size: 72px;
+  color: #444;
+}
+
+.conf-sub {
+  color: rgb(36, 101, 191);
+  background: rgba(236, 240, 241, 0.7);
+  font-size: 13px;
+  padding: 3px 5px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.conf-sub::selection {
+  background: #0097e6;
+}
+
+.checkbox input[type="checkbox"]:checked:after {
+  background-color: #0097e6;
+  border-color: #0097e6;
+}
+
+.checkbox input[type="checkbox"]:after,
+.checkbox input[type="checkbox"]:focus:after {
+  border-color: #0097e6;
+}
+
+@media only screen and (max-width: 780px) {
+  #conf-timer {
+    font-size: 64px;
+  }
+
+  .calendar {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #conf-timer {
+    font-size: 36px;
+  }
+
+  .conf-place {
+    display: none;
+  }
+
+  .conf-date {
+    display: none;
+  }
+
+  .note {
+    display: none;
+  }
+
+  .conf-row {
+    margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #conf-timer {
+    font-size: 28px;
+  }
+}
+
+.checkbox {
+  /* font-size: 12px; */
+}
+
+.calendar {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.calendar img {
+  margin-right: 5px;
+}
+
+.ind-cal {
+  margin: 0 5px;
+}
+
+.calendar img {
+  height: 20px;
+}
+
+.marked {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+}
+
+.non-marked {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.conf-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conf-content {
+  width: 95%;
+}
+
+.type-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+}
+
+.type-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox-text {
+  margin-left: 3px;
+}
+
+.card-type {
+  color: rgb(150, 150, 150);
+}
+
+.collapse-button {
+  display: flex;
+}
+
+.status-collapse {
+  margin-right: 3px;
+  font-size: 30px;
+}
+
+.collapse-button a {
+  border-bottom: none;
+}
+
+/* Styling Checkbox Starts */
+.checkbox-label {
+  display: block;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  clear: both;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  border: 2px solid #0067FF;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #0067FF;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+  opacity:1;
+  border: 2px solid #0067FF;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  height: 0px;
+  width: 0px;
+  border-radius: 5px;
+  border: solid #009BFF;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(0deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity:1;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+-webkit-transform: rotate(45deg) scale(1);
+-ms-transform: rotate(45deg) scale(1);
+transform: rotate(45deg) scale(1);
+opacity:1;
+left: 8px;
+top: 3px;
+width: 6px;
+height: 12px;
+border: solid #009BFF;
+border-width: 0 2px 2px 0;
+background-color: transparent;
+border-radius: 0;
+}
+
+
+
+/* For Ripple Effect */
+.checkbox-label .checkbox-custom::before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  top: 10px;
+  width: 0px;
+  height: 0px;
+  border-radius: 5px;
+  border: 2px solid #0067FF;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);    
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::before {
+  left: -3px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  -webkit-transform: scale(3);
+  -ms-transform: scale(3);
+  transform: scale(3);
+  opacity:0;
+  z-index: 999;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+
+
+
+/* Style for Circular Checkbox */
+.checkbox-label .checkbox-custom.circular {
+  border-radius: 50%;
+  border: 2px solid #0067FF;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom.circular {
+  background-color: #0067FF;
+  border-radius: 50%;
+  border: 2px solid #0067FF;
+}
+.checkbox-label input:checked ~ .checkbox-custom.circular::after {
+  border: solid #0067FF;
+  border-width: 0 2px 2px 0;
+}
+.checkbox-label .checkbox-custom.circular::after {
+  border-radius: 50%;
+}
+
+.checkbox-label .checkbox-custom.circular::before {
+  border-radius: 50%;
+  border: 2px solid #0067FF;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom.circular::before {
+  border-radius: 50%;
+}
