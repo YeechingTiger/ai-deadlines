@@ -59,8 +59,8 @@
             <div class="collapse show" id="collapse-status">
               <div class="form-group status-filter card card-body">
                 <div>
-                  <button type="button" class="btn btn-primary btn-sm btn-status">Select/Clear All</button>
-                  
+                  <button type="button" class="btn btn-primary btn-sm btn-status">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-status-remove">Clear All</button>
                 </div>
                 <br>
                 <div class="row">
@@ -101,8 +101,8 @@
             <div class="collapse show" id="collapse-type">
               <div class="form-group type-filter card card-body">
                 <div>
-                  <button type="button" class="btn btn-primary btn-sm btn-type">Select/Clear All</button>
-                  
+                  <button type="button" class="btn btn-primary btn-sm btn-type">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-type-remove">Clear All</button>
                 </div>
                 <br>
                 <div class="row">
@@ -143,8 +143,8 @@
             <div class="collapse show" id="collapse-topic">
               <div class="form-group topic-filter card card-body">
                 <div>
-                  <button type="button" class="btn btn-primary btn-sm btn-topic">Select/Clear All</button>
-                
+                  <button type="button" class="btn btn-primary btn-sm btn-topic">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-topic-remove">Clear All</button>
                 </div>
                 <br>
                 <div class="row">
@@ -182,8 +182,8 @@
             <div class="collapse show" id="collapse-people">
               <div class="form-group people-filter card card-body">
                 <div>
-                  <button type="button" class="btn btn-primary btn-sm btn-people">Select/Clear All</button>
-                  
+                  <button type="button" class="btn btn-primary btn-sm btn-people">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-people-remove">Clear All</button>
                 </div>
                 <br>
                 <div class="row">
@@ -221,8 +221,8 @@
             <div class="collapse show" id="collapse-location">
               <div class="form-group location-filter card card-body">
                 <div>
-                  <button type="button" class="btn btn-primary btn-sm btn-location">Select/Clear All</button>
-                  
+                  <button type="button" class="btn btn-primary btn-sm btn-location">Select All</button>
+                  <button type="button" class="btn btn-danger btn-sm btn-location-remove">Clear All</button>
                 </div>
                 <br>
                 <div class="row">
@@ -852,6 +852,7 @@
     addCollpase('location');
 
     function buttonFunction(filterName, filterAll, filter) {
+      console.log()
       $(`.btn-${filterName}`).click(function () {
         if (filter.length < filterAll.length) {
           for (var i = 0; i < filterAll.length; i++) {
@@ -859,15 +860,24 @@
           }
           filter.splice(0, filter.length);
           filter.push(...filterAll);
+          hideUncheckedSubs();
+          store.set('{{ site.domain }}' + filterName, filter);
+          windowHistory();
         } else {
           for (var i = 0; i < filterAll.length; i++) {
             $('#' + filterAll[i] + '-checkbox').prop('checked', false);
           }
           filter.splice(0, filter.length);
+          console.log(filter);
+          hideUncheckedSubs();
+          store.set('{{ site.domain }}' + filterName, filter);
+          windowHistory();
         }
-        hideUncheckedSubs();
-        store.set('{{ site.domain }}' + filterName, filter);
-        windowHistory();
+
+      });
+
+      $(`.btn-${filterName}-remove`).click(function () {
+
       });
     }
 

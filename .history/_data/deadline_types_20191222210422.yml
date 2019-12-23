@@ -5,5 +5,7 @@
   sub: GT
 - name: Journal
   sub: JL
+- name: Editorial Board
+  sub: EB
 - name: Other
   sub: OTHER
