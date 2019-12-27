@@ -118,16 +118,16 @@
   year: 2021
   id: PSB-2021
   link: https://psb.stanford.edu/callfor/workshopproposals/
-  deadline: '2020-02-07 23:59:59'
-  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 6, 2020</li></ul>'
+  deadline: '2020-03-01 23:59:59'
+  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 31, 2020</li></ul>'
   timezone: EST
   # date: June 15-18, 2020
   place: NAP
   country: NAP
   sub: BHI
   type: OTHER
-  project_title: Session/Workshop Proposal
-  people: JIANG
+  project_title: Application
+  people: HANSI
   status: TG
 
 - title: RSUSSH

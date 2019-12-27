@@ -113,23 +113,6 @@
   sub: SGM
   status: TG
 
-- title: PSB 2021 - Session/Workshop Proposal
-  full_title: PSB 2021 - Session/Workshop Proposal
-  year: 2021
-  id: PSB-2021
-  link: https://psb.stanford.edu/callfor/workshopproposals/
-  deadline: '2020-02-07 23:59:59'
-  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 6, 2020</li></ul>'
-  timezone: EST
-  # date: June 15-18, 2020
-  place: NAP
-  country: NAP
-  sub: BHI
-  type: OTHER
-  project_title: Session/Workshop Proposal
-  people: JIANG
-  status: TG
-
 - title: RSUSSH
   full_title: The 5th RSU National and International Research Conference on Science
     and Technology, Social Sciences, and Humanities 2020
@@ -311,6 +294,21 @@
   project_title: Patient timeline for chart review
   people: XING
   status: TG
+
+- title: ICRLSH
+  full_title: 3rd International Conference on Research in Life-Sciences & Healthcare
+    (ICRLSH)
+  year: 2020
+  id: icrlsh20
+  link: https://eurasiaresearch.org/conference/singapore-icrlsh-28-29-mar-2020
+  deadline: '2020-03-26 23:59:59'
+  timezone: EST
+  date: March 28-29, 2020
+  place: Suntec City Mall, Singapore
+  country: SINGAPORE
+  sub: BHI
+  type: CFWS
+  status: ND
 
 - title: ISWC
   full_title: INTERNATIONAL SEMANTIC WEB CONFERENCE

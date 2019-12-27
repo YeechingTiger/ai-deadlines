@@ -1,5 +1,20 @@
 ---
 
+- title: TBSS
+  full_title: The 2nd International Conference on Tourism, Business, & Social Sciences
+    2020
+  year: 2020
+  id: tbss20
+  link: https://www.dpu.ac.th/caiconf2020/
+  deadline: '2019-12-31 23:59:59'
+  timezone: EST
+  date: December 11, 2020
+  place: Thailand
+  country: THAILAND
+  sub: SN
+  type: CFWS
+  status: ND
+
 - title: ICTDM
   full_title: 2020 International Conference on Communication Technology and Data Mining
   year: 2020
@@ -111,23 +126,6 @@
   project_title: Grant
   people: YI
   sub: SGM
-  status: TG
-
-- title: PSB 2021 - Session/Workshop Proposal
-  full_title: PSB 2021 - Session/Workshop Proposal
-  year: 2021
-  id: PSB-2021
-  link: https://psb.stanford.edu/callfor/workshopproposals/
-  deadline: '2020-02-07 23:59:59'
-  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 6, 2020</li></ul>'
-  timezone: EST
-  # date: June 15-18, 2020
-  place: NAP
-  country: NAP
-  sub: BHI
-  type: OTHER
-  project_title: Session/Workshop Proposal
-  people: JIANG
   status: TG
 
 - title: RSUSSH
@@ -281,21 +279,6 @@
   people: JIANG
   status: AT
 
-- title: RFA-MD-20-005
-  full_title: Methods and Measurement in Research with Sexual and Gender Minority (SGM) Populations (R21- Clinical Trials Not Allowed)
-  id: RFA-MD-20-005
-  link: https://grants.nih.gov/grants/guide/rfa-files/RFA-MD-20-005.html
-  deadline: '2020-03-13 17:00:00'
-  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Letter of Intent Due Date(s): February 12, 2020</li> <li>Open Date (Earliest Submission Date): February 12, 2020</li> </ul>'
-  timezone: EST
-  type: GT
-  place: NAP
-  country: NAP
-  sub: SGM
-  project_title: Grant
-  people: YI,JIANG
-  status: TG
-
 - title: AMIA
   year: 2020
   full_title: AMIA Annual Symposium
@@ -311,6 +294,21 @@
   project_title: Patient timeline for chart review
   people: XING
   status: TG
+
+- title: ICRLSH
+  full_title: 3rd International Conference on Research in Life-Sciences & Healthcare
+    (ICRLSH)
+  year: 2020
+  id: icrlsh20
+  link: https://eurasiaresearch.org/conference/singapore-icrlsh-28-29-mar-2020
+  deadline: '2020-03-26 23:59:59'
+  timezone: EST
+  date: March 28-29, 2020
+  place: Suntec City Mall, Singapore
+  country: SINGAPORE
+  sub: BHI
+  type: CFWS
+  status: ND
 
 - title: ISWC
   full_title: INTERNATIONAL SEMANTIC WEB CONFERENCE
