@@ -1,16 +1,30 @@
 ---
 
-- title: TBSS
-  full_title: The 2nd International Conference on Tourism, Business, & Social Sciences
-    2020
+- title: VIS
+  full_title: IEEE Visualization Conference (VIS)
   year: 2020
-  id: tbss20
-  link: https://www.dpu.ac.th/caiconf2020/
-  deadline: '2019-12-31 23:59:59'
+  id: VIS-2020
+  link: http://www.gistam.org/
+  deadline: '2020-01-06 23:59:59'
   timezone: EST
-  date: December 11, 2020
-  place: Thailand
-  sub: SN
+  date: May 7-9, 2020
+  place: Prague, Czech Republic
+  country: CZECH
+  sub: KR
+  type: CFWS
+  status: ND
+
+- title: GISTAM
+  full_title: 6th International Conference on Geographical Information Systems Theory, Applications and Management (GISTAM)
+  year: 2020
+  id: GISTAM-2020
+  link: http://www.gistam.org/
+  deadline: '2020-01-06 23:59:59'
+  timezone: EST
+  date: May 7-9, 2020
+  place: Prague, Czech Republic
+  country: CZECH
+  sub: KR
   type: CFWS
   status: ND
 
@@ -22,7 +36,8 @@
   deadline: '2020-01-10 23:59:59'
   timezone: EST
   date: May 29-31, 2020
-  place: Bangkok,Thailand
+  place: Bangkok, Thailand
+  country: THAILAND
   sub: DM
   type: CFWS
   status: ND
@@ -37,7 +52,8 @@
   timezone: EST
   date: July 21-24, 2020
   place: Kitakyushu, Japan
-  sub: DM,KR,ML,NLP,SW,SN,OR
+  country: JAPAN
+  sub: AI,SW,SN,KR
   type: CFWS
   status: ND
 
@@ -48,8 +64,9 @@
   link: https://www.icwsm.org/2020/index.html
   deadline: '2020-01-15 23:59:59'
   timezone: EST
-  date: June, 2020
+  date: June 8-11, 2020
   place: Atlanta, Georgia
+  country: USA
   sub: SN,ML
   type: CFWS
   project_title: Paper
@@ -69,6 +86,7 @@
   timezone: EST
   date: March 11-14, 2020
   place: Pattaya, Thailand
+  country: THAILAND
   sub: IT
   type: CFWS
   status: SB
@@ -85,6 +103,7 @@
   timezone: EST
   date: July 11-17, 2020
   place: Yokohama, Japan
+  country: JAPAN
   sub: AI
   type: CFWS
   status: ND
@@ -97,6 +116,8 @@
   deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
+  place: NAP
+  country: NAP
   extra-deadline: <ul><b>Other Deadlines:</b><li> 2021-01-25 17:00:00</li></ul>
   project_title: Grant
   people: YI
@@ -111,11 +132,30 @@
   deadline: '2020-01-31 17:00:00'
   timezone: EST
   type: GT
+  place: NAP
+  country: NAP
   extra-deadline: '<ul><b>Other Deadlines:</b><li>FY 2020: 2020-01-31 17:00:00</li><li>FY
     2021: 2021-01-25 17:00:00</li></ul>'
   project_title: Grant
   people: YI
   sub: SGM
+  status: TG
+
+- title: PSB 2021 - Session/Workshop Proposal
+  full_title: PSB 2021 - Session/Workshop Proposal
+  year: 2021
+  id: PSB-2021
+  link: https://psb.stanford.edu/callfor/workshopproposals/
+  deadline: '2020-02-07 23:59:59'
+  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 6, 2020</li></ul>'
+  timezone: EST
+  # date: June 15-18, 2020
+  place: NAP
+  country: NAP
+  sub: BHI
+  type: OTHER
+  project_title: Session/Workshop Proposal
+  people: JIANG
   status: TG
 
 - title: RSUSSH
@@ -124,10 +164,11 @@
   year: 2020
   id: rsussh20
   link: https://rsucon.rsu.ac.th/
-  deadline: '2020-01-31 23:59:59'
+  deadline: '2020-02-28 23:59:59'
   timezone: EST
   date: May 1, 2020
   place: Rangsit Univetsity, Thailand
+  country: THAILAND
   sub: SN
   type: CFWS
   status: ND
@@ -141,6 +182,7 @@
   timezone: America/Los_Angeles
   date: July 12-18, 2020
   place: Vienna, Austria
+  country: AUSTRIA
   sub: AI
   type: CFWS
   status: ND
@@ -154,6 +196,7 @@
   timezone: UTC-11
   date: August 22-27, 2020
   place: San Diego, California
+  country: USA
   sub: AI,SN
   type: CFWS
   status: ND
@@ -167,6 +210,7 @@
   timezone: America/Los_Angeles
   date: August 13-14, 2020
   place: Tianjin, China
+  country: CHINA
   sub: DM,ML,SW,SN
   type: CFWS
   status: ND
@@ -180,6 +224,7 @@
   timezone: EST
   date: June 15-18, 2020
   place: Oldenburg, Germany
+  country: GERMANY
   sub: BHI
   type: CFWS
   status: ND
@@ -195,9 +240,28 @@
     Date): January 26, 2020</li> </ul>'
   timezone: EST
   type: GT
+  place: NAP
+  country: NAP
   sub: CC
   project_title: Grant
   people: ZHAOYI
+  status: TG
+
+- title: ACI-Student Editorial Board
+  full_title: Applied Clinical Informatics Journal (ACI) Student & Early Career Editorial Board Call
+  year: 2020
+  id: aci-eb-20
+  link: https://www.amia.org/ACI-student-editorial-board
+  deadline: '2020-03-01 23:59:59'
+  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 31, 2020</li></ul>'
+  timezone: EST
+  # date: June 15-18, 2020
+  place: NAP
+  country: NAP
+  sub: BHI
+  type: OTHER
+  project_title: Application
+  people: HANSI
   status: TG
 
 - title: NOT-AG-20-008
@@ -208,8 +272,24 @@
   deadline: '2020-03-06 17:00:00'
   timezone: EST
   type: GT
+  place: NAP
+  country: NAP
   project_title: Grant
   people: JIANG
+  sub: AD
+  status: TG
+
+- title: NOT-CA-20-019
+  full_title: "Notice of Special Interest: Alzheimer’s-focused Administrative Supplements for NIH/NCI Grants that are not focused on Alzheimer’s Disease"
+  id: NOT-CA-20-019
+  link: https://grants.nih.gov/grants/guide/notice-files/NOT-CA-20-019.html
+  deadline: '2020-03-06 17:00:00'
+  timezone: EST
+  type: GT
+  place: NAP
+  country: NAP
+  project_title: Grant
+  people: YI
   sub: AD
   status: TG
 
@@ -222,25 +302,43 @@
   timezone: EST
   date: March 9-13, 2020
   place: Orlando, Florida
+  country: USA
   type: CFWS
   sub: HIT
   project_title: Attending Only
   people: JIANG
   status: AT
 
-- title: ICRLSH
-  full_title: 3rd International Conference on Research in Life-Sciences & Healthcare
-    (ICRLSH)
-  year: 2020
-  id: icrlsh20
-  link: https://eurasiaresearch.org/conference/singapore-icrlsh-28-29-mar-2020
-  deadline: '2020-03-26 23:59:59'
+- title: RFA-MD-20-005
+  full_title: Methods and Measurement in Research with Sexual and Gender Minority (SGM) Populations (R21- Clinical Trials Not Allowed)
+  id: RFA-MD-20-005
+  link: https://grants.nih.gov/grants/guide/rfa-files/RFA-MD-20-005.html
+  deadline: '2020-03-13 17:00:00'
+  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Letter of Intent Due Date(s): February 12, 2020</li> <li>Open Date (Earliest Submission Date): February 12, 2020</li> </ul>'
   timezone: EST
-  date: March 28-29, 2020
-  place: Suntec City Mall, Singapore
-  sub: BHI
+  type: GT
+  place: NAP
+  country: NAP
+  sub: SGM
+  project_title: Grant
+  people: YI,JIANG
+  status: TG
+
+- title: AMIA
+  year: 2020
+  full_title: AMIA Annual Symposium
+  id: AMIA-2020
+  link: https://www.amia.org/amia2020
+  deadline: '2020-03-15 00:00:00'
+  timezone: EST
+  date: November 14-18, 2020
+  place: Chicago, IL
+  country: USA
   type: CFWS
-  status: ND
+  sub: BHI
+  project_title: Patient timeline for chart review
+  people: XING
+  status: TG
 
 - title: ISWC
   full_title: INTERNATIONAL SEMANTIC WEB CONFERENCE
@@ -251,6 +349,7 @@
   timezone: UTC+2
   date: November 2-6, 2020
   place: Athens, Greece
+  country: GREECE
   sub: SW
   type: CFWS
   people: HANSI,XING
@@ -262,11 +361,13 @@
   year: 2020
   id: aime20
   link: http://aime20.aimedicine.info/index.php
-  deadline: '2020-04-30 23:59:59'
+  deadline: '2020-04-17 23:59:59'
+  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Abstract Submission: April 3, 2020</li></ul>'
   timezone: EST
   date: August 26-29, 2020
   place: Minneapolis, MN
-  sub: ML,DM,OR,KR,NLP
+  country: USA
+  sub: OR,KR,AI
   type: CFWS
   status: ND
 
@@ -279,6 +380,7 @@
   timezone: EST
   date: December 16-19, 2020
   place: Seoul, South Korea
+  country: KOREA
   sub: OR,AI,ML
   type: CFWS
   status: ND
@@ -292,6 +394,7 @@
   timezone: UTC-10
   date: February 7-12, 2020
   place: New York, New York
+  country: USA
   sub: AI
   type: CFWS
   status: ND

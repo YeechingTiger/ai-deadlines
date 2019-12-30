@@ -1,0 +1,45 @@
+---
+- name: Thailand
+  sub: THAILAND
+
+- name: Japan
+  sub: JAPAN
+
+- name: Austria
+  sub: AUSTRIA
+
+- name: USA
+  sub: USA
+
+- name: China
+  sub: CHINA
+
+- name: Germany
+  sub: GERMANY
+
+- name: Singapore
+  sub: SINGAPORE
+
+- name: Greece
+  sub: GREECE
+
+- name: South Korea
+  sub: KOREA
+
+- name: Czech Republic
+  sub: CZECH
+
+- name: Vietnam
+  sub: VIETNAM
+
+- name: Mexico
+  sub: MEXICO
+
+- name: India
+  sub: INDIA
+
+- name: Italy
+  sub: INDIA 
+
+- name: Not Applicable
+  sub: NAP
