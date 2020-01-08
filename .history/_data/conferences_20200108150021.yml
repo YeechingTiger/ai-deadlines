@@ -551,20 +551,6 @@
   type: CFWS
   status: ND
 
-- title: Best of ASCO
-  full_title: 8th Best of ASCO
-  year: 2020
-  id: Best-ASCO-2020
-  link: http://www.boabangkok.com/2020/index.php
-  deadline: '2020-06-30 23:59:59'
-  timezone: EST
-  date: August 7-8, 2020
-  place: Bangkok, Thailand
-  country: THAILAND
-  sub: CC
-  type: CFWS
-  status: ND
-
 - title: BIBM
   full_title: International Conference on Bioinformatics and Biomedicine
   year: 2020
@@ -844,6 +830,20 @@
   date: May 29 - June 2, 2020
   place: Chicago, Illinois
   country: USA
+  sub: CC
+  type: CFWS
+  status: ND
+
+- title: Best of ASCO
+  full_title: 8th Best of ASCO
+  year: 2020
+  id: Best-ASCO-2020
+  link: http://www.boabangkok.com/2020/index.php
+  deadline: '2020-06-30 23:59:59'
+  timezone: EST
+  date: August 7-8, 2020
+  place: Bangkok, Thailand
+  country: THAILAND
   sub: CC
   type: CFWS
   status: ND
