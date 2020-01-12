@@ -433,20 +433,6 @@
   type: CFWS
   status: ND
 
-- title: VIS
-  full_title: IEEE Visualization Conference (VIS)
-  year: 2020
-  id: VIS-2020
-  link: http://ieeevis.org/year/2020/welcome
-  deadline: '2020-03-31 17:00:00'
-  timezone: EST
-  date: October 26-30, 2020
-  place: Salt Lake City, Utah
-  country: USA
-  sub: KR
-  type: CFWS
-  status: ND
-
 - title: ISWC
   full_title: INTERNATIONAL SEMANTIC WEB CONFERENCE
   year: 2020
@@ -689,6 +675,20 @@
   place: Taipei
   country: CHINA
   sub: IT
+  type: CFWS
+  status: ND
+
+- title: VIS
+  full_title: IEEE Visualization Conference (VIS)
+  year: 2020
+  id: VIS-2020
+  link: http://ieeevis.org/year/2020/welcome
+  deadline: '2020-03-31 23:59:59'
+  timezone: EST
+  date: October 26-30, 2020
+  place: Salt Lake City, Utah
+  country: USA
+  sub: KR
   type: CFWS
   status: ND
 
