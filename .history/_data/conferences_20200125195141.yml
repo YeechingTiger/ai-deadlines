@@ -79,7 +79,7 @@
   year: 2020
   id: icwsm20
   link: https://www.icwsm.org/2020/index.html
-  deadline: '2020-03-16 23:59:59'
+  deadline: '2020-01-15 23:59:59'
   extra-deadline: '<ul><b>Other Deadlines:</b> <li>Deadline for paper Submissions:
     January 15, 2020</li> </ul>'
   timezone: EST
@@ -420,20 +420,6 @@
   people: YI,JIANG
   status: TG
 
-- title: ACM HYPERTEXT
-  full_title: ACM Conference on Hypertext and Social Media
-  year: 2020
-  id: HYPERTEXT-2020
-  link: https://projects.cah.ucf.edu/ht2020/
-  deadline: '2020-03-13 23:59:59'
-  timezone: EST
-  date: July 13-15, 2020
-  place: Orlando, Florida
-  country: USA
-  sub: SN,SW
-  type: CFWS
-  status: ND
-
 - title: SigTelCom
   full_title: 4th International Conference on Recent Advances in Signal Processing,
     Telecommunications & Computing (SigTelCom)
@@ -564,20 +550,6 @@
   place: Galway, Ireland
   country: IRELAND
   sub: AI,KR,SW
-  type: CFWS
-  status: ND
-
-- title: RECSYS
-  full_title: 14th ACM Conference on Recommender Systems
-  year: 2020
-  id: RECSYS-2020
-  link: http://recsys.acm.org/recsys20/
-  deadline: '2020-05-04 23:59:59'
-  timezone: EST
-  date: September 22-26, 2020
-  place: Rio de Janeiro, Brazil
-  country: BRAZIL
-  sub: AI,NLP
   type: CFWS
   status: ND
 
@@ -777,6 +749,34 @@
   place: Honolulu, Hawaii
   country: USA
   sub: HCI
+  type: CFWS
+  status: ND
+
+- title: ACM HYPERTEXT
+  full_title: ACM Conference on Hypertext and Social Media
+  year: 2020
+  id: HYPERTEXT-2020
+  link: https://human.iisys.de/ht2019/
+  deadline: TBA
+  timezone: EST
+  date: Not Decided
+  place: Not Decided
+  country: NAP
+  sub: SN,SW
+  type: CFWS
+  status: ND
+
+- title: RECSYS
+  full_title: 14th ACM Conference on Recommender Systems
+  year: 2020
+  id: RECSYS-2020
+  link: http://recsys.acm.org/recsys20/
+  deadline: TBA
+  timezone: EST
+  date: September 22-26, 2020
+  place: Rio de Janeiro, Brazil
+  country: BRAZIL
+  sub: AI,NLP
   type: CFWS
   status: ND
 

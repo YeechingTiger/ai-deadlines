@@ -567,20 +567,6 @@
   type: CFWS
   status: ND
 
-- title: RECSYS
-  full_title: 14th ACM Conference on Recommender Systems
-  year: 2020
-  id: RECSYS-2020
-  link: http://recsys.acm.org/recsys20/
-  deadline: '2020-05-04 23:59:59'
-  timezone: EST
-  date: September 22-26, 2020
-  place: Rio de Janeiro, Brazil
-  country: BRAZIL
-  sub: AI,NLP
-  type: CFWS
-  status: ND
-
 - title: CLUSTER
   full_title: IEEE International Conference on Cluster Computing (CLUSTER)
   year: 2020
@@ -777,6 +763,20 @@
   place: Honolulu, Hawaii
   country: USA
   sub: HCI
+  type: CFWS
+  status: ND
+
+- title: RECSYS
+  full_title: 14th ACM Conference on Recommender Systems
+  year: 2020
+  id: RECSYS-2020
+  link: http://recsys.acm.org/recsys20/
+  deadline: '2020-05-13 23:59:59'
+  timezone: EST
+  date: September 22-26, 2020
+  place: Rio de Janeiro, Brazil
+  country: BRAZIL
+  sub: AI,NLP
   type: CFWS
   status: ND
 
