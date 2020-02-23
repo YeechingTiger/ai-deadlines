@@ -28,6 +28,20 @@
   type: CFWS
   status: ND
 
+- title: NeurIPS
+  full_title: Neural Information Processing Systems
+  year: 2020
+  id: NeurIPS-2020
+  link: https://neurips.cc/Conferences/2020/
+  deadline: '2020-05-12 23:59:59'
+  timezone: UTC-12
+  date: December 6-12, 2020
+  place: Vancouver, Canada
+  country: CANADA
+  sub: AI,ML
+  type: CFWS
+  status: ND
+
 - title: WI-IAT
   full_title: IEEE/WIC/ACM International Joint Conference on Web Intelligence and Intelligent Agent Technology
   year: 2020
@@ -38,7 +52,7 @@
   date: Dec 10-13, 2020
   place: Melbourne, Australia
   country: AUSTRIA
-  sub: SW,ML
+  sub: SW, ML
   type: CFWS
   status: ND
 
