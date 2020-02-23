@@ -1,5 +1,223 @@
 ---
 
+- title: ACM BCB
+  full_title: ACM Conference on Bioinformatics, Computational Biology and Health Informatics
+  year: 2020
+  id: ACM-BCB-2020
+  link: https://acm-bcb.org/
+  deadline: '2020-05-22 23:59:59'
+  timezone: UTC-12
+  date: Aug 30 - Sep 2, 2020
+  place: Atlanta, Georgia
+  country: USA
+  sub: BHI,NLP,KR
+  type: CFWS
+  status: ND
+
+- title: NeurIPS
+  full_title: Neural Information Processing Systems
+  year: 2020
+  id: NeurIPS-2020
+  link: https://neurips.cc/Conferences/2020/
+  deadline: '2020-05-12 23:59:59'
+  timezone: UTC-12
+  date: December 6-12, 2020
+  place: Vancouver, Canada
+  country: CANADA
+  sub: AI,ML
+  type: CFWS
+  status: ND
+
+- title: NeurIPS
+  full_title: Neural Information Processing Systems
+  year: 2020
+  id: NeurIPS-2020
+  link: https://neurips.cc/Conferences/2020/
+  deadline: '2020-05-12 23:59:59'
+  timezone: UTC-12
+  date: December 6-12, 2020
+  place: Vancouver, Canada
+  country: CANADA
+  sub: AI,ML
+  type: CFWS
+  status: ND
+
+- title: WI-IAT
+  full_title: IEEE/WIC/ACM International Joint Conference on Web Intelligence and Intelligent Agent Technology
+  year: 2020
+  id: WI-IAT-2020
+  link: http://wi2020.vcrab.com.au/
+  deadline: '2020-07-01 23:59:59'
+  timezone: UTC-12
+  date: Dec 10-13, 2020
+  place: Melbourne, Australia
+  country: AUSTRIA
+  sub: SW, ML
+  type: CFWS
+  status: ND
+
+- title: BI
+  full_title: ference on Web Intelligence and Intelligent Agent Technology
+  year: 2020
+  id: BI-2020
+  link: http://wi2020.vcrab.com.au/
+  deadline: '2020-07-01 23:59:59'
+  timezone: UTC-12
+  date: Dec 10-13, 2020
+  place: Melbourne, Australia
+  country: AUSTRIA
+  sub: SW, ML
+  type: CFWS
+  status: ND
+
+- title: NOT-OD-20-049
+  full_title: 'Notice of Special Interest: Administrative Supplements for Research
+    on Sex/Gender Influences (Admin Supp Clinical Trial Optional)'
+  id: NOT-OD-20-049
+  link: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-20-049.html
+  deadline: '2020-01-31 17:00:00'
+  timezone: EST
+  type: GT
+  place: NAP
+  country: NAP
+  extra-deadline: <ul><b>Other Deadlines:</b><li> 2021-01-25 17:00:00</li></ul>
+  project_title: Grant
+  people: YI
+  sub: SGM
+  status: TG
+
+- title: NOT-OD-20-032
+  full_title: 'Notice of Special Interest: Administrative Supplements for Research
+    on Sexual and Gender Minority (SGM) Populations (Admin Supp Clinical Trial Optional)'
+  id: NOT-OD-20-032
+  link: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-20-032.html
+  deadline: '2020-01-31 17:00:00'
+  timezone: EST
+  type: GT
+  place: NAP
+  country: NAP
+  extra-deadline: '<ul><b>Other Deadlines:</b><li>FY 2020: 2020-01-31 17:00:00</li><li>FY
+    2021: 2021-01-25 17:00:00</li></ul>'
+  project_title: Grant
+  people: YI
+  sub: SGM
+  status: TG
+
+- title: ITOEC
+  full_title: IEEE 5th Information Technology and Mechatronics Engineering Conference
+    (ITOEC)
+  year: 2020
+  id: ITOEC-2020
+  link: http://www.itoec.org/
+  deadline: '2020-01-31 23:59:59'
+  timezone: EST
+  date: Jun 12-14,  2020
+  place: Chongqing, China
+  country: CHINA
+  sub: IT
+  type: CFWS
+  status: ND
+
+- title: ACL
+  full_title: Annual Conference of the Association for Computational Linguistics
+  year: 2020
+  id: ACL-2020
+  link: https://acl2020.org/calls/papers/
+  deadline: '2020-01-31 23:59:59'
+  timezone: UTC-12
+  date: July 5-10, 2020
+  place: Seattle, Washington
+  country: USA
+  sub: NLP
+  type: CFWS
+  status: ND
+
+- title: ICML
+  full_title: International Conference on Machine Learning
+  year: 2020
+  id: icml20
+  link: https://icml.cc/Conferences/2020
+  deadline: '2020-02-07 03:59:59'
+  timezone: America/Los_Angeles
+  date: July 12-18, 2020
+  place: Vienna, Austria
+  country: AUSTRIA
+  sub: AI
+  type: CFWS
+  status: ND
+
+- title: PSB 2021 - Session/Workshop Proposal
+  full_title: PSB 2021 - Session/Workshop Proposal
+  year: 2021
+  id: PSB-2021
+  link: https://psb.stanford.edu/callfor/workshopproposals/
+  deadline: '2020-02-07 23:59:59'
+  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 6, 2020</li></ul>'
+  timezone: EST
+  place: NAP
+  country: NAP
+  sub: BHI
+  type: OTHER
+  project_title: Session/Workshop Proposal
+  people: JIANG
+  status: TG
+
+- title: KDD
+  full_title: Knowledge Discovery and Data Mining
+  year: 2020
+  id: kdd20
+  link: https://www.kdd.org/kdd2020/
+  deadline: '2020-02-13 23:59:59'
+  timezone: UTC-11
+  date: August 22-27, 2020
+  place: San Diego, California
+  country: USA
+  sub: AI,SN
+  type: CFWS
+  status: ND
+
+- title: APWeb-WAIM
+  full_title: APWeb-WAIM Joint Conference on Web and Big Data
+  year: 2020
+  id: apwebwaim20
+  link: http://www.tjudb.cn/apwebwaim2020/?from=timeline&isappinstalled=0
+  deadline: '2020-02-16 23:59:59'
+  timezone: America/Los_Angeles
+  date: August 13-14, 2020
+  place: Tianjin, China
+  country: CHINA
+  sub: DM,ML,SW,SN
+  type: CFWS
+  status: ND
+
+- title: UAI
+  full_title: Conference on Uncertainty in Artificial Intelligence (UAI)
+  year: 2020
+  id: UAI-2020
+  link: http://auai.org/uai2020/
+  deadline: '2020-02-20 23:59:59'
+  timezone: UTC+1
+  date: August 3-6, 2020
+  place: Ontario, Canada
+  country: CANADA
+  sub: AI
+  type: CFWS
+  status: ND
+
+- title: ICHI
+  full_title: The 8th IEEE International Conference on Healthcare
+  year: 2020
+  id: ichi20
+  link: https://hs-heilbronn.de/ichi2020/
+  deadline: '2020-02-20 23:59:59'
+  timezone: EST
+  date: June 15-18, 2020
+  place: Oldenburg, Germany
+  country: GERMANY
+  sub: BHI
+  type: CFWS
+  status: ND
+
 - title: RFA-CA-20-014
   full_title: NCI Pathway to Independence Award for Outstanding Early Stage Postdoctoral
     Researchers (K99/R00 - Independent Clinical Trial Not Allowed)
@@ -256,20 +474,6 @@
   type: CFWS
   status: ND
 
-- title: BI
-  full_title: International Conference on Brain Informatics
-  year: 2020
-  id: BI-2020
-  link: http://www.bi2020.org/
-  deadline: '2020-04-01 23:59:59'
-  timezone: UTC-12
-  date: September 18-20, 2020
-  place: Padova, Italy
-  country: ITALY
-  sub: SN, AI, SW
-  type: CFWS
-  status: ND
-
 - title: ISWC
   full_title: INTERNATIONAL SEMANTIC WEB CONFERENCE
   year: 2020
@@ -373,48 +577,6 @@
   type: CFWS
   status: ND
 
-- title: NeurIPS
-  full_title: Neural Information Processing Systems
-  year: 2020
-  id: NeurIPS-2020
-  link: https://neurips.cc/Conferences/2020/
-  deadline: '2020-05-12 23:59:59'
-  timezone: UTC-12
-  date: December 6-12, 2020
-  place: Vancouver, Canada
-  country: CANADA
-  sub: AI,ML
-  type: CFWS
-  status: ND
-
-- title: NeurIPS
-  full_title: Neural Information Processing Systems
-  year: 2020
-  id: NeurIPS-2020
-  link: https://neurips.cc/Conferences/2020/
-  deadline: '2020-05-12 23:59:59'
-  timezone: UTC-12
-  date: December 6-12, 2020
-  place: Vancouver, Canada
-  country: CANADA
-  sub: AI,ML
-  type: CFWS
-  status: ND
-
-- title: ACM BCB
-  full_title: ACM Conference on Bioinformatics, Computational Biology and Health Informatics
-  year: 2020
-  id: ACM-BCB-2020
-  link: https://acm-bcb.org/
-  deadline: '2020-05-22 23:59:59'
-  timezone: UTC-12
-  date: Aug 30 - Sep 2, 2020
-  place: Atlanta, Georgia
-  country: USA
-  sub: BHI,NLP,KR
-  type: CFWS
-  status: ND
-
 - title: Best of ASCO
   full_title: 8th Best of ASCO
   year: 2020
@@ -426,21 +588,6 @@
   place: Bangkok, Thailand
   country: THAILAND
   sub: CC
-  type: CFWS
-  status: ND
-
-- title: WI-IAT
-  full_title: IEEE/WIC/ACM International Joint Conference on Web Intelligence and
-    Intelligent Agent Technology
-  year: 2020
-  id: WI-IAT-2020
-  link: http://wi2020.vcrab.com.au/
-  deadline: '2020-07-01 23:59:59'
-  timezone: UTC-12
-  date: Dec 10-13, 2020
-  place: Melbourne, Australia
-  country: AUSTRIA
-  sub: SW, ML
   type: CFWS
   status: ND
 
@@ -643,154 +790,6 @@
   place: Yokohama, Japan
   country: JAPAN
   sub: AI
-  type: CFWS
-  status: ND
-
-- title: NOT-OD-20-049
-  full_title: 'Notice of Special Interest: Administrative Supplements for Research
-    on Sex/Gender Influences (Admin Supp Clinical Trial Optional)'
-  id: NOT-OD-20-049
-  link: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-20-049.html
-  deadline: '2020-01-31 17:00:00'
-  timezone: EST
-  type: GT
-  place: NAP
-  country: NAP
-  extra-deadline: <ul><b>Other Deadlines:</b><li> 2021-01-25 17:00:00</li></ul>
-  project_title: Grant
-  people: YI
-  sub: SGM
-  status: TG
-
-- title: NOT-OD-20-032
-  full_title: 'Notice of Special Interest: Administrative Supplements for Research
-    on Sexual and Gender Minority (SGM) Populations (Admin Supp Clinical Trial Optional)'
-  id: NOT-OD-20-032
-  link: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-20-032.html
-  deadline: '2020-01-31 17:00:00'
-  timezone: EST
-  type: GT
-  place: NAP
-  country: NAP
-  extra-deadline: '<ul><b>Other Deadlines:</b><li>FY 2020: 2020-01-31 17:00:00</li><li>FY
-    2021: 2021-01-25 17:00:00</li></ul>'
-  project_title: Grant
-  people: YI
-  sub: SGM
-  status: TG
-
-- title: ITOEC
-  full_title: IEEE 5th Information Technology and Mechatronics Engineering Conference
-    (ITOEC)
-  year: 2020
-  id: ITOEC-2020
-  link: http://www.itoec.org/
-  deadline: '2020-01-31 23:59:59'
-  timezone: EST
-  date: Jun 12-14,  2020
-  place: Chongqing, China
-  country: CHINA
-  sub: IT
-  type: CFWS
-  status: ND
-
-- title: ACL
-  full_title: Annual Conference of the Association for Computational Linguistics
-  year: 2020
-  id: ACL-2020
-  link: https://acl2020.org/calls/papers/
-  deadline: '2020-01-31 23:59:59'
-  timezone: UTC-12
-  date: July 5-10, 2020
-  place: Seattle, Washington
-  country: USA
-  sub: NLP
-  type: CFWS
-  status: ND
-
-- title: ICML
-  full_title: International Conference on Machine Learning
-  year: 2020
-  id: icml20
-  link: https://icml.cc/Conferences/2020
-  deadline: '2020-02-07 03:59:59'
-  timezone: America/Los_Angeles
-  date: July 12-18, 2020
-  place: Vienna, Austria
-  country: AUSTRIA
-  sub: AI
-  type: CFWS
-  status: ND
-
-- title: PSB 2021 - Session/Workshop Proposal
-  full_title: PSB 2021 - Session/Workshop Proposal
-  year: 2021
-  id: PSB-2021
-  link: https://psb.stanford.edu/callfor/workshopproposals/
-  deadline: '2020-02-07 23:59:59'
-  extra-deadline: '<ul><b>Other Deadlines:</b> <li>Announcement Date: March 6, 2020</li></ul>'
-  timezone: EST
-  place: NAP
-  country: NAP
-  sub: BHI
-  type: OTHER
-  project_title: Session/Workshop Proposal
-  people: JIANG
-  status: TG
-
-- title: KDD
-  full_title: Knowledge Discovery and Data Mining
-  year: 2020
-  id: kdd20
-  link: https://www.kdd.org/kdd2020/
-  deadline: '2020-02-13 23:59:59'
-  timezone: UTC-11
-  date: August 22-27, 2020
-  place: San Diego, California
-  country: USA
-  sub: AI,SN
-  type: CFWS
-  status: ND
-
-- title: APWeb-WAIM
-  full_title: APWeb-WAIM Joint Conference on Web and Big Data
-  year: 2020
-  id: apwebwaim20
-  link: http://www.tjudb.cn/apwebwaim2020/?from=timeline&isappinstalled=0
-  deadline: '2020-02-16 23:59:59'
-  timezone: America/Los_Angeles
-  date: August 13-14, 2020
-  place: Tianjin, China
-  country: CHINA
-  sub: DM,ML,SW,SN
-  type: CFWS
-  status: ND
-
-- title: UAI
-  full_title: Conference on Uncertainty in Artificial Intelligence (UAI)
-  year: 2020
-  id: UAI-2020
-  link: http://auai.org/uai2020/
-  deadline: '2020-02-20 23:59:59'
-  timezone: UTC+1
-  date: August 3-6, 2020
-  place: Ontario, Canada
-  country: CANADA
-  sub: AI
-  type: CFWS
-  status: ND
-
-- title: ICHI
-  full_title: The 8th IEEE International Conference on Healthcare
-  year: 2020
-  id: ichi20
-  link: https://hs-heilbronn.de/ichi2020/
-  deadline: '2020-02-20 23:59:59'
-  timezone: EST
-  date: June 15-18, 2020
-  place: Oldenburg, Germany
-  country: GERMANY
-  sub: BHI
   type: CFWS
   status: ND
 
